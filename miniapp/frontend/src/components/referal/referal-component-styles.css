@@ -1,0 +1,18 @@
+.referal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    align-items: flex-start;
+    font-size: 16px;
+    padding:5px 10px 5px 40px;
+    width: 80%;
+    border-radius: 45px;
+    background-color: #1a58cd; 
+    color: rgb(255, 255, 255);
+    margin-top: 15px;
+    box-shadow: 0px 3px 5px 1px rgb(2, 80, 139);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
