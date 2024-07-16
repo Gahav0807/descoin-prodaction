@@ -17,38 +17,7 @@ export default function TaskPage() {
       <Task task_in_db={"task2"} task_name={"Telegram"} task_price={50000} url_of_btn={"https://youtube.com"} user_id={userId}/>
       <Task task_in_db={"task3"} task_name={"Instagram"} task_price={50000} url_of_btn={"https://youtube.com"} user_id={userId}/>
       <Task task_in_db={"task4"} task_name={"VK"} task_price={50000} url_of_btn={"https://youtube.com"} user_id={userId}/>
-
-      {/* <div className='task'>
-        <p className='task-name'>telegram</p> 
-        <p className='task-price'>50000</p>
-        <button className='claim-btn'>
-            <a href='https://youtube.com'>Join</a>
-        </button>
-      </div>
-
-      <div className='task'>
-        <p className='task-name'>youtube</p> 
-        <p className='task-price'>50000</p>
-        <button className='claim-btn' id="task1">
-            <a href='https://youtube.com'>Join</a>
-        </button>
-      </div>
-
-      <div className='task'>
-        <p className='task-name'>xbet</p> 
-        <p className='task-price'>5000</p>
-        <button className='claim-btn' id="task2">
-            <a href='https://youtube.com'>Join</a>
-        </button>
-      </div>
-
-      <div className='task'>
-        <p className='task-name'>xbet</p> 
-        <p className='task-price'>5000</p>
-        <button className='claim-btn' id="task3">
-            <a href='https://youtube.com'>Join</a>
-        </button>
-      </div> */}
+      
     </div>
 
 

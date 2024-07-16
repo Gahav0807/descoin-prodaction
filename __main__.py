@@ -1,6 +1,6 @@
 """
 
-lets start this shit
+starting programm
 
 """
 import asyncio
