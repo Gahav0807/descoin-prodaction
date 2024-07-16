@@ -4,25 +4,41 @@ import React, { useState, useEffect } from 'react';
 import { Toaster, toast } from "sonner";
 import Referal from "@/components/referal/page"
 
-// тестовые данные
-const userId = 1573326140;
-const userName = "Jhonffffffffffffffffffffffffffffffffffff";
-
 type Friend = {
   referal_name: string;
 };
 
+// const userId:number=1573326142;
+// const userName:string='jhon09';
+
 export default function RefPage() {
-  const [linkToCopy, setLinkToCopy] = useState<string>(`https://t.me/bot_name?start=${userId}`);
+  const [userId, setUserId] = useState<number | undefined>(undefined);
+  const [userName, setUserName] = useState<string | undefined>(undefined);
+  const [linkToCopy, setLinkToCopy] = useState<string>('');
   const [friends, setFriends] = useState<Friend[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(linkToCopy);
-    toast.success("Link copied to clipboard!");
+    if (linkToCopy) {
+      navigator.clipboard.writeText(linkToCopy);
+      toast.success("Link copied to clipboard!");
+    }
   };
 
   useEffect(() => {
+    const { user } = window.Telegram.WebApp.initDataUnsafe;
+    if (user && user.id) {
+      setUserId(user.id);
+      setUserName(user.username);
+      setLinkToCopy(`https://t.me/bot_name?start=${user.id}`);
+    } else {
+      setUserId(undefined);
+      setUserName(undefined);
+      setLinkToCopy('');
+    }
+
+    setLinkToCopy(`https://t.me/bot_name?start=${userId}`);
+
     async function getReferals(userId: number) {
       try {
         // Perform request to server to get list of referrals by userId
@@ -35,7 +51,9 @@ export default function RefPage() {
       }
     }
 
-    getReferals(userId);
+    if (userId) {
+      getReferals(userId);
+    }
   }, []);
 
   return (
@@ -46,7 +64,7 @@ export default function RefPage() {
           <div id="profile_logo_head"></div>
           <div id="profile_logo_neck"></div>
         </div>
-        <p id="name_of_user">{userName}</p>
+        <p id="name_of_user">{userName || 'Unknown'}</p>
         <button id="copy_url_of_ref_btn" onClick={handleCopyLink}>COPY YOUR LINK</button>
       </div>
 

@@ -3,33 +3,37 @@ import React, { useState, useEffect } from 'react';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
 
-// test data
-const userId = 1573326122;
 const limitOfClicks = 10000;
 
 export default function ClickerPage() {
   const [balance, setBalance] = useState<number | null>(null);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
+  const [userId, setUserId] = useState<number | undefined>(undefined);
 
-  /* When the user enters the application, we get their data */
   useEffect(() => {
-    getDataFromServerById(userId)
-      .then(({ wallet, limit_clicks }) => {
-        setBalance(Number(wallet));
-        setLimitClicks(limit_clicks);
+    const { user } = window.Telegram.WebApp.initDataUnsafe;
+    if (user && user.id) {
+      setUserId(user.id);
 
-        const progressPercentage = (limit_clicks / limitOfClicks) * 100;
-        setProgress(progressPercentage);
-      })
-      .catch((error) => {
-        console.error('Error fetching data:', error);
-      });
+      getDataFromServerById(user.id)
+        .then(({ wallet, limit_clicks }) => {
+          setBalance(Number(wallet));
+          setLimitClicks(limit_clicks);
+
+          const progressPercentage = (limit_clicks / limitOfClicks) * 100;
+          setProgress(progressPercentage);
+        })
+        .catch((error) => {
+          console.error('Error fetching data:', error);
+        });
+    } else {
+      setUserId(undefined);
+    }
   }, []);
 
-  /* When the user leaves, we save their data */
   useEffect(() => {
-    if (balance !== null && limitClicks !== null) {
+    if (balance !== null && limitClicks !== null && userId !== undefined) {
       const handleUnload = () => {
         updateDataOnServer(userId, balance, limitClicks);
       };
@@ -40,9 +44,8 @@ export default function ClickerPage() {
         window.removeEventListener('beforeunload', handleUnload);
       };
     }
-  }, [balance, limitClicks]);
+  }, [balance, limitClicks, userId]);
 
-  /* Clicker logic */
   const handleClick = () => {
     if (limitClicks && limitClicks <= 0) {
       toast.error('Limit!');
@@ -52,8 +55,7 @@ export default function ClickerPage() {
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
   };
 
-  /* Server requests */
-  async function getDataFromServerById(userId:number) {
+  async function getDataFromServerById(userId: number) {
     try {
       const response = await fetch(`http://localhost:9000/getInfo/${userId}`);
       const data = await response.json();
@@ -64,14 +66,13 @@ export default function ClickerPage() {
     }
   }
 
-  async function updateDataOnServer(userId:number, balance:number, limitClicks:number) {
+  async function updateDataOnServer(userId: number, balance: number, limitClicks: number) {
     try {
       await fetch(`http://localhost:9000/updateInfo/${userId}/${balance}/${limitClicks}`);
     } catch (error) {
       console.error('Error updating data:', error);
     }
   }
-
   return (
     <main>
       <Toaster position="top-center" richColors />
