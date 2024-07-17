@@ -1,14 +1,12 @@
 import os
 import asyncpg
 from asyncpg import PostgresError
-from ... import logger
-
+from .. import logger
 from dotenv import load_dotenv
 
 load_dotenv()
 
-
-class Database:
+class BotDatabase:
     """
     Singleton async DB connection. Don't forget to shutdown!
     """
@@ -40,53 +38,42 @@ class Database:
             self.pool = None
             logger.info("Connection to DB is closed")
         else:
-            logger.warning("Trying to close a non-open connection")
+            print("Trying to close a non-open connection")
 
-    async def get_data(self, query):
+    async def add_ref_node(self, referent_id, referal_id, referal_name):
         try:
             if not self.pool:
                 await self.create_pool()
             async with self.pool.acquire() as connection:
                 async with connection.transaction():
-                    result = await connection.fetch(query)
-                    logger.debug("Executed query: %s", query)
-                    return result
+                    await connection.execute("INSERT INTO ref(referent_id,referal_id,referal_name) VALUES($1,$2,$3)", referent_id,referal_id,referal_name)
+                    await connection.execute("UPDATE main SET wallet = wallet + 50000 WHERE user_id =$1",referent_id)
+
+                    logger.debug("Добавлен реферальный-узел!")
         except PostgresError as e:
-            logger.error("Error while fetching list: %s", e)
+            print("Error while fetching list: %s", e)
         except Exception as e:
-            logger.error("Unexpected error: %s", e)
+            print("Unexpected error: %s", e)
             raise e from e
         
-    async def set_data(self, query):
+    async def is_user_referal(self, user_id):
         try:
             if not self.pool:
                 await self.create_pool()
             async with self.pool.acquire() as connection:
                 async with connection.transaction():
-                    result = await connection.execute(query)
-                    logger.debug("Executed query: %s", query)
-                    return result
-        except PostgresError as e:
-            logger.error("Error while fetching list: %s", e)
-        except Exception as e:
-            logger.error("Unexpected error: %s", e)
-            raise e from e
+                    logger.debug("Проверка,является ли юзер рефералом")
+                    is_referal = await connection.fetchval("SELECT COUNT(*) FROM ref WHERE referal_id = $1", user_id)
 
-    async def get_list(self, query):
-        result = await self.get_data(query)
-        return [dict(record) for record in result]
-    
-    async def get_fetchval(self, query):
-        try:
-            if not self.pool:
-                await self.create_pool()
-            async with self.pool.acquire() as connection:
-                async with connection.transaction():
-                    result = await connection.fetchval(query)
-                    logger.debug("Executed query: %s", query)
-                    return result
+                    if is_referal == 0:
+                        logger.info("Юзер не является рефералом")
+                        return False
+                    else:
+                        logger.info("Юзер является рефералом")
+                        return True
         except PostgresError as e:
-            logger.error("Error while fetchval list: %s", e)
+            print("Error while fetching list: %s", e)
         except Exception as e:
-            logger.error("Unexpected error: %s", e)
+            print("Unexpected error: %s", e)
             raise e from e
+    

@@ -1,16 +1,18 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
 
 const limitOfClicks = 10000;
+const DEG = 40;
 
 export default function ClickerPage() {
+  const [userId, setUserId] = useState<number | undefined>(undefined);
   const [balance, setBalance] = useState<number | null>(null);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
-  const [userId, setUserId] = useState<number | undefined>(undefined);
-
+  
+  /* При заходе в приложение получаем данные пользователя с сервера */
   useEffect(() => {
     const { user } = window.Telegram.WebApp.initDataUnsafe;
     if (user && user.id) {
@@ -33,10 +35,11 @@ export default function ClickerPage() {
       setBalance(0);
       setLimitClicks(10000);
       setProgress(0);
-      toast.error('Error on the telegram side! Try later');
+      toast.error("Error on Telegram side! Try later");
     }
   }, []);
 
+  /* Обновляем данные пользователя при выходе с страницы */
   useEffect(() => {
     if (balance !== null && limitClicks !== null && userId !== undefined) {
       const handleUnload = () => {
@@ -51,15 +54,28 @@ export default function ClickerPage() {
     }
   }, [balance, limitClicks, userId]);
 
-  const handleClick = () => {
+  /* Логика кликера */
+  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    // анимация
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    card.style.transform = `perspective(1000px) rotateX(${-y / 10}deg) rotateY(${x / 10}deg)`;
+    setTimeout(()=>{
+      card.style.transform = '';
+    },100);
+    
     if (limitClicks && limitClicks <= 0) {
       toast.error('Limit!');
       return;
     }
+
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
   };
 
+  /* Хендлеры */
   async function getDataFromServerById(userId: number) {
     try {
       const response = await fetch(`http://localhost:9000/getInfo/${userId}`);

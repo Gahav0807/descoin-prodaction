@@ -1,0 +1,5 @@
+2024-07-18 01:55:43.834 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 01:56:44.406 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:9 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 01:56:44.895 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 01:56:44.901 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 01:56:44.902 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:16 - Пользователь уже есть, отправляем данные

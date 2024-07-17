@@ -1,5 +1,5 @@
 from ..core.database import Database
-from ..... import logger
+from ... import logger
 
 data=Database()
 

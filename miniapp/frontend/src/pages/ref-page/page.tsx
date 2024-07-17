@@ -10,10 +10,12 @@ type Friend = {
 
 export default function RefPage() {
   const [userName, setUserName] = useState<string | undefined>(undefined);
+  const [userId, setUserId] = useState<number | undefined>(undefined);
   const [linkToCopy, setLinkToCopy] = useState<string>('');
   const [friends, setFriends] = useState<Friend[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
+  /* Копирование реферальной сыллки при нажатии на кнопку */
   const handleCopyLink = () => {
     if (linkToCopy) {
       navigator.clipboard.writeText(linkToCopy);
@@ -21,6 +23,16 @@ export default function RefPage() {
     }
   };
 
+  // тестовые данные
+  // useEffect(() => {
+  //     setUserName("yamal");
+  //     setLinkToCopy(`https://t.me/bot_name?start=${1573326140}`);
+
+  //     getReferals(1573326140);
+  //     setIsLoading(false);
+  // }, []);
+
+  /* Получение списка рефералов при входе в приложение */
   useEffect(() => {
     const { user } = window.Telegram.WebApp.initDataUnsafe;
     if (user && user.id) {
@@ -31,12 +43,14 @@ export default function RefPage() {
       getReferals(user.id);
       setIsLoading(false);
     } else {
+      toast.error("Error on Telegram side! Try later");
       setUserName(undefined);
       setLinkToCopy('undefined');
       setIsLoading(false);
     }
   }, []);
 
+  /* Хендлер */
   async function getReferals(userId: number) {
     try {
       // Perform request to server to get list of referrals by userId

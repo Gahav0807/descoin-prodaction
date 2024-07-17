@@ -1,7 +1,7 @@
 import asyncio
 from  .app.core.database import Database
 from .app.server import Server
-from ... import logger
+from . import logger
 
 data = Database()
 server = Server()
