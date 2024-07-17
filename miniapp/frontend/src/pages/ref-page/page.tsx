@@ -8,11 +8,7 @@ type Friend = {
   referal_name: string;
 };
 
-// const userId:number=1573326142;
-// const userName:string='jhon09';
-
 export default function RefPage() {
-  const [userId, setUserId] = useState<number | undefined>(undefined);
   const [userName, setUserName] = useState<string | undefined>(undefined);
   const [linkToCopy, setLinkToCopy] = useState<string>('');
   const [friends, setFriends] = useState<Friend[]>([]);
@@ -28,33 +24,29 @@ export default function RefPage() {
   useEffect(() => {
     const { user } = window.Telegram.WebApp.initDataUnsafe;
     if (user && user.id) {
-      setUserId(user.id);
+      
       setUserName(user.username);
       setLinkToCopy(`https://t.me/bot_name?start=${user.id}`);
+
+      getReferals(user.id);
+      setIsLoading(false);
     } else {
-      setUserId(undefined);
       setUserName(undefined);
-      setLinkToCopy('');
-    }
-
-    setLinkToCopy(`https://t.me/bot_name?start=${userId}`);
-
-    async function getReferals(userId: number) {
-      try {
-        // Perform request to server to get list of referrals by userId
-        const response = await fetch(`http://localhost:9000/getReferals/${userId}`);
-        const data = await response.json();
-        setFriends(data);
-        setIsLoading(false);
-      } catch (error) {
-        toast.error("Error! Try later");
-      }
-    }
-
-    if (userId) {
-      getReferals(userId);
+      setLinkToCopy('undefined');
+      setIsLoading(false);
     }
   }, []);
+
+  async function getReferals(userId: number) {
+    try {
+      // Perform request to server to get list of referrals by userId
+      const response = await fetch(`http://localhost:9000/getReferals/${userId}`);
+      const data = await response.json();
+      setFriends(data);
+    } catch (error) {
+      toast.error("Error on server side! Try later");
+    }
+  }
 
   return (
     <main>
@@ -72,7 +64,7 @@ export default function RefPage() {
         {isLoading ? (
           <p className="load-friends">Loading</p>
         ) : friends.length === 0 ? (
-          <p className="load-friends">You don&apos;t have any friends.</p>
+          <p className="load-friends">You dont have any friends.</p>
         ) : (
           <div className="list-of-friends">
             {friends.map((friend, index) => (
@@ -87,7 +79,7 @@ export default function RefPage() {
       </div>
 
       <footer id="footer">
-        <a id="footer_text" href="clicker-page" style={{ textDecoration: 'none' }}>
+        <a id="footer_text" href="/" style={{ textDecoration: 'none' }}>
           🪙<br />Tap
         </a>
         <a id="footer_text" className="ref_btn" style={{ textDecoration: 'none' }}>

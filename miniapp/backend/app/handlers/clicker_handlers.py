@@ -19,12 +19,12 @@ class ClickerHandler():
                 else:
                     logger.info("Пользователя нет, заносим в бд, отправляем базовые значения")
         
-                    # Пользователь не найден, добавляем его в базу данных с балансом 0 и лимитом кликов 6000
+                    # Пользователь не найден, добавляем его в базу данных с балансом 0 и лимитом кликов 10000
                     await data.set_data(
-                        f"INSERT INTO main (user_id, wallet, limit_clicks) VALUES ({user_id}, 0, 6000)"
+                        f"INSERT INTO main (user_id, wallet, limit_clicks) VALUES ({user_id}, 0, 10000)"
                     )
                     # Возвращаем информацию о пользователе
-                    return {"user_id": user_id, "wallet": 0, "limit_clicks": 6000}
+                    return {"user_id": user_id, "wallet": 0, "limit_clicks": 10000}
                 
             except Exception as e:
                  logger.error(f"Ошибка при получении информации о пользователе: {e}")

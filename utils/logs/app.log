@@ -20970,3 +20970,426 @@
 2024-07-16 20:36:11,869 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
 2024-07-16 20:36:14,558 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
 2024-07-16 20:36:14,572 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-16 21:00:36,755 - cat_coin - [1m[93mWARNING[0m - start_app.py:17 Сервера остановлены
+2024-07-16 21:00:36,762 - cat_coin - [1m[92mINFO[0m - database.py:41 Connection to DB is closed
+2024-07-17 13:00:01,381 - cat_coin - [1m[92mINFO[0m - start_app.py:14 Старт сервера...
+2024-07-17 13:00:10,667 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:11,795 - cat_coin - [1m[92mINFO[0m - database.py:34 Connection to DB is created
+2024-07-17 13:00:11,843 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:00:11,856 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:11,858 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:00:23,377 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:23,380 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:00:23,450 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:23,457 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:00:44,380 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:44,383 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:00:44,393 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:00:44,395 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:03:06,176 - cat_coin - [1m[93mWARNING[0m - start_app.py:17 Сервера остановлены
+2024-07-17 13:03:06,204 - cat_coin - [1m[92mINFO[0m - database.py:41 Connection to DB is closed
+2024-07-17 13:03:14,003 - cat_coin - [1m[92mINFO[0m - start_app.py:14 Старт сервера...
+2024-07-17 13:03:27,552 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:03:28,373 - cat_coin - [1m[92mINFO[0m - database.py:34 Connection to DB is created
+2024-07-17 13:03:28,376 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:03:28,416 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:03:28,422 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:03:33,443 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:03:33,449 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:03:34,308 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:03:34,315 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:03:34,330 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:03:34,333 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:17,446 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:17,449 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:17,472 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:17,472 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:20,752 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:20,758 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:24,284 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:24,287 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:24,307 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:24,310 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:26,270 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:26,293 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:27,047 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:27,051 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:27,067 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:27,072 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:28,072 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:28,097 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:30,199 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:30,203 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:30,217 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:30,220 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:31,835 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:31,860 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:33,807 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:33,810 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:33,841 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:33,843 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:41,181 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:41,188 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:07:41,227 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:41,230 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:42,623 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:42,655 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:43,500 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:43,508 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:43,537 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:43,543 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:46,244 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:46,273 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:48,413 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:48,423 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:48,466 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:48,474 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:51,079 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:07:51,104 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:07:52,085 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:52,092 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:07:52,108 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:07:52,111 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:13:35,801 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:13:35,942 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:13:35,946 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:13:35,949 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:16:24,062 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:16:24,067 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:16:24,072 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:16:24,078 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:22:28,722 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:22:28,844 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:22:28,861 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:22:28,868 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:22:28,876 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:22:28,878 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:06,149 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:06,158 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:06,163 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:06,169 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:06,171 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:06,171 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:35,103 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:35,106 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:35,117 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:35,120 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:23:35,129 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:23:35,131 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:24:08,185 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:24:08,211 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:24:11,169 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:24:11,171 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:24:11,185 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:24:11,187 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:24:26,104 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:24:26,130 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:24:29,495 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:24:29,497 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:24:29,510 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:24:29,512 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:24:29,523 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:24:29,525 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:25:56,527 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:25:56,531 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:25:56,534 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:25:56,538 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:26:07,965 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:26:07,991 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:26:10,653 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:26:10,656 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:26:10,666 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:26:10,669 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:26:33,392 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:26:33,395 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:26:33,401 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:26:33,404 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:26:43,565 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:26:43,592 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:29:38,214 - cat_coin - [1m[92mINFO[0m - start_app.py:14 Старт сервера...
+2024-07-17 13:29:44,399 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:29:45,169 - cat_coin - [1m[92mINFO[0m - database.py:34 Connection to DB is created
+2024-07-17 13:29:45,172 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:30:44,465 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:30:44,469 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:30:47,415 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:30:47,418 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:30:47,459 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:30:47,463 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:30:47,473 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:30:47,477 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:31:19,079 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:31:19,083 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:31:22,070 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:31:22,074 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:31:22,083 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:31:22,085 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:31:22,094 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:31:22,097 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:16,040 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:33:16,046 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:33:20,290 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:20,293 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:33:20,329 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:20,332 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:20,342 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:20,345 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:24,828 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:33:24,854 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:33:28,991 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:28,994 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:29,002 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:29,005 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:29,013 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:29,016 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:40,160 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:33:40,184 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:33:43,545 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:43,548 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:43,558 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:43,561 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:43,570 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:43,572 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:47,193 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:33:47,217 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:33:56,870 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:56,873 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:33:56,891 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:33:56,894 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:16,316 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:34:16,342 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:34:20,324 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:20,326 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:20,337 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:20,342 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:20,354 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:20,357 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:45,052 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:34:45,080 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:34:48,167 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:48,172 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:48,181 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:48,183 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:34:48,191 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:34:48,195 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:35:03,234 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:35:03,240 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:35:06,343 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:35:06,346 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:35:06,366 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:35:06,368 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:35:12,048 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:35:12,077 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:35:21,724 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:35:21,727 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:35:21,731 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:35:21,741 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:35:21,748 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:35:21,751 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:37:59,798 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:37:59,833 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:38:03,390 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:38:03,394 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:38:03,402 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:38:03,405 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:38:03,414 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:38:03,415 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:39:01,603 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:39:01,627 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:39:05,898 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:39:05,902 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:39:05,910 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:39:05,913 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:39:05,920 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:39:05,924 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:40:01,423 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:40:01,428 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:40:01,468 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:40:01,473 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:40:01,485 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:40:01,487 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:40:29,410 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:40:29,439 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:43:42,137 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:43:42,140 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:43:42,151 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:43:42,157 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:43:42,166 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:43:42,169 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:44:13,458 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:13,461 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:20 Пользователя нет, заносим в бд, отправляем базовые значения
+2024-07-17 13:44:13,497 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:13,500 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:44:13,511 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:13,514 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:44:53,652 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:44:53,677 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:44:56,526 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:56,528 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:44:56,537 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:56,540 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:44:56,550 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:44:56,552 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:08,747 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:08,753 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:08,766 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:08,769 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:08,798 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:08,803 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:47,317 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:47,319 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:47,332 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:47,334 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:47,342 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:47,344 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:59,750 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:59,753 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:59,761 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:59,765 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:47:59,774 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:47:59,777 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:07,450 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:07,453 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:07,472 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:07,475 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:46,975 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:46,979 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:46,991 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:46,992 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:47,000 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:47,016 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:48:59,966 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:48:59,966 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:00,000 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:00,003 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:00,014 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:00,016 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:00,749 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:00,749 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:00,765 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:00,770 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:00,776 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:00,784 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:34,974 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:34,979 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:35,005 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:35,009 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:41,426 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:41,428 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:41,444 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:41,446 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:59,017 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:59,024 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:59,057 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:59,064 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:49:59,083 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:49:59,087 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:50:20,165 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:50:20,167 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:50:20,186 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:50:20,190 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:26,090 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:26,094 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:26,106 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:26,109 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:26,124 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:26,127 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:28,776 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:28,782 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:28,810 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:28,817 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:35,317 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:35,320 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:35,329 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:35,332 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:51:35,342 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:51:35,344 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:32,380 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:32,386 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:32,403 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:32,406 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:32,414 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:32,414 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:46,355 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:46,355 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:46,355 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:46,371 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:52:46,380 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:52:46,380 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:53:34,448 - cat_coin - [1m[93mWARNING[0m - start_app.py:17 Сервера остановлены
+2024-07-17 13:53:34,452 - cat_coin - [1m[92mINFO[0m - database.py:41 Connection to DB is closed
+2024-07-17 13:53:36,988 - cat_coin - [1m[92mINFO[0m - start_app.py:14 Старт сервера...
+2024-07-17 13:53:57,457 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:53:58,249 - cat_coin - [1m[92mINFO[0m - database.py:34 Connection to DB is created
+2024-07-17 13:53:58,255 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:53:58,266 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:53:58,270 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:53:58,280 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:53:58,282 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:10,081 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:35 Обновляем инфу пользователя в бд.main
+2024-07-17 13:55:10,107 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:42 Проверяем, есть ли пользователь в бд.clicks_od_day && clicks_of_month
+2024-07-17 13:55:12,747 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:12,750 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:12,758 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:12,762 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:12,771 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:12,774 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:46,624 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:46,626 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:46,637 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:46,640 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:55:46,649 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:55:46,651 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:56:29,871 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:56:29,874 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:56:29,884 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:56:29,887 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 13:56:29,895 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 13:56:29,897 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 14:00:50,832 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 14:00:50,837 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 14:00:50,849 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 14:00:50,851 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 14:00:50,861 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:9 Получаем инфу про пользователя из бд(clicker)
+2024-07-17 14:00:50,864 - cat_coin - [1m[92mINFO[0m - clicker_handlers.py:16 Пользователь уже есть, отправляем данные
+2024-07-17 14:04:49,262 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:04:49,307 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:04:49,317 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:05:10,965 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:05:10,978 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:05:10,989 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:06:06,473 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:06:06,485 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:06:06,495 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:08:30,402 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:08:30,417 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:08:30,430 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:13:14,801 - cat_coin - [1m[92mINFO[0m - task_handlers.py:9 Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-17 14:13:14,816 - cat_coin - [1m[92mINFO[0m - task_handlers.py:48 Пользователя нет. Добавляем в бд, меняем значение таска и отдаем награду
+2024-07-17 14:13:20,149 - cat_coin - [1m[92mINFO[0m - task_handlers.py:9 Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-17 14:13:20,153 - cat_coin - [1m[92mINFO[0m - task_handlers.py:18 Пользователь есть. Проверка: сделан ли таск
+2024-07-17 14:13:20,158 - cat_coin - [1m[92mINFO[0m - task_handlers.py:27 Таск сделан. Ничего не делаем
+2024-07-17 14:13:22,156 - cat_coin - [1m[92mINFO[0m - task_handlers.py:9 Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-17 14:13:22,159 - cat_coin - [1m[92mINFO[0m - task_handlers.py:18 Пользователь есть. Проверка: сделан ли таск
+2024-07-17 14:13:22,163 - cat_coin - [1m[92mINFO[0m - task_handlers.py:27 Таск сделан. Ничего не делаем
+2024-07-17 14:16:20,070 - cat_coin - [1m[92mINFO[0m - task_handlers.py:9 Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-17 14:16:20,073 - cat_coin - [1m[92mINFO[0m - task_handlers.py:18 Пользователь есть. Проверка: сделан ли таск
+2024-07-17 14:16:20,075 - cat_coin - [1m[92mINFO[0m - task_handlers.py:27 Таск сделан. Ничего не делаем
+2024-07-17 14:16:31,587 - cat_coin - [1m[92mINFO[0m - task_handlers.py:9 Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-17 14:16:31,590 - cat_coin - [1m[92mINFO[0m - task_handlers.py:18 Пользователь есть. Проверка: сделан ли таск
+2024-07-17 14:16:31,594 - cat_coin - [1m[92mINFO[0m - task_handlers.py:34 Таск не сделан.Изменяем значение таска, присваиваем награду
+2024-07-17 14:21:49,848 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:21:49,999 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:21:50,014 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:22:25,525 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:22:25,544 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:22:54,312 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:22:54,325 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:10,361 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:10,377 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:10,390 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:12,883 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:12,901 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:19,068 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:19,088 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей
+2024-07-17 14:23:19,100 - cat_coin - [1m[92mINFO[0m - ref_handlers.py:8 Получаем список друзей

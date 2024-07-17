@@ -18,7 +18,7 @@ export default function ClickerPage() {
 
       getDataFromServerById(user.id)
         .then(({ wallet, limit_clicks }) => {
-          setBalance(Number(wallet));
+          setBalance(wallet);
           setLimitClicks(limit_clicks);
 
           const progressPercentage = (limit_clicks / limitOfClicks) * 100;
@@ -26,9 +26,14 @@ export default function ClickerPage() {
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
+          toast.error("Error on server side. Try later");
         });
     } else {
       setUserId(undefined);
+      setBalance(0);
+      setLimitClicks(10000);
+      setProgress(0);
+      toast.error('Error on the telegram side! Try later');
     }
   }, []);
 
@@ -62,7 +67,7 @@ export default function ClickerPage() {
       return { wallet: data.wallet, limit_clicks: data.limit_clicks };
     } catch (error) {
       console.error('Error fetching data:', error);
-      return { wallet: 0, limit_clicks: 0 };
+      throw error;
     }
   }
 
@@ -73,6 +78,7 @@ export default function ClickerPage() {
       console.error('Error updating data:', error);
     }
   }
+
   return (
     <main>
       <Toaster position="top-center" richColors />
@@ -86,7 +92,7 @@ export default function ClickerPage() {
       <button id="button" onClick={handleClick}></button>
 
       <div id="limit_display">
-        {limitClicks ?? 0}/{limitOfClicks}⚡️
+        {limitClicks}/{limitOfClicks}⚡️
       </div>
 
       <footer id="footer">
