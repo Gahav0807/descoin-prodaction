@@ -3,3 +3,368 @@
 2024-07-18 01:56:44.895 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
 2024-07-18 01:56:44.901 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
 2024-07-18 01:56:44.902 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:16 - Пользователь уже есть, отправляем данные
+2024-07-18 01:59:38.660 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 01:59:38.665 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 13:01:29.552 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:01:49.275 | INFO     | backend.app.handlers.task_handlers:try_do_task:13 - Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-18 13:01:50.120 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 13:01:50.162 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 13:01:50.166 | INFO     | backend.app.handlers.task_handlers:try_do_task:52 - Пользователя нет. Добавляем в бд, меняем значение таска и отдаем награду
+2024-07-18 13:01:50.171 | DEBUG    | backend.app.core.database:set_data:67 - Executed query: %s
+2024-07-18 13:01:50.177 | DEBUG    | backend.app.core.database:set_data:67 - Executed query: %s
+2024-07-18 13:01:50.181 | DEBUG    | backend.app.core.database:set_data:67 - Executed query: %s
+2024-07-18 13:02:01.906 | INFO     | backend.app.handlers.task_handlers:try_do_task:13 - Попытка сделать таск. Проверка на вхождение пользователя в бд
+2024-07-18 13:02:01.909 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 13:02:01.911 | INFO     | backend.app.handlers.task_handlers:try_do_task:22 - Пользователь есть. Проверка: сделан ли таск
+2024-07-18 13:02:01.914 | DEBUG    | backend.app.core.database:get_fetchval:86 - Executed query: %s
+2024-07-18 13:02:01.916 | INFO     | backend.app.handlers.task_handlers:try_do_task:31 - Таск сделан. Ничего не делаем
+2024-07-18 13:02:44.325 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 13:02:44.355 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 13:08:51.906 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:26:04.016 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:26:09.435 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 13:26:09.436 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 13:26:28.000 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:26:39.090 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:26:39.863 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:26:39.867 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:26:39.869 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:26:43.356 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 13:30:00.539 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:30:00.555 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 13:30:00.555 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 13:32:33.023 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:32:36.928 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:32:37.520 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:32:37.530 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:32:37.533 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:32:40.379 | WARNING  | backend.start_app:start_app:17 - Сервер остановлен
+2024-07-18 13:37:21.263 | INFO     | backend.start_app:start_app:24 - Старт сервера...
+2024-07-18 13:37:26.249 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:37:27.029 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:37:27.034 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:37:27.036 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:37:28.911 | DEBUG    | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:38:02.714 | INFO     | backend.start_app:start_app:24 - Старт сервера...
+2024-07-18 13:38:05.880 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:38:06.413 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:38:06.416 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:38:06.417 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:38:09.616 | DEBUG    | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:39:43.231 | INFO     | backend.start_app:start_app:24 - Старт сервера...
+2024-07-18 13:39:47.570 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:39:48.353 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:39:48.356 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:39:48.357 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:39:50.445 | DEBUG    | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:42:19.301 | INFO     | backend.start_app:start_app:24 - Старт сервера...
+2024-07-18 13:42:23.071 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:42:23.679 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:42:23.679 | DEBUG    | backend.app.core.database:get_data:56 - Executed query: %s
+2024-07-18 13:42:23.689 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:42:25.821 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:50:18.228 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:50:22.361 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:50:22.778 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:50:22.780 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:50:22.781 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:50:24.711 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:54:14.688 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:54:22.100 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:54:22.100 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 13:54:25.672 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:54:28.692 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:54:29.096 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:54:29.099 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 13:54:29.100 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:54:30.728 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:55:55.419 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:56:03.076 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:56:03.500 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:56:03.502 | DEBUG    | backend.app.core.database:get_data:59 - Executed query: %s
+2024-07-18 13:56:03.504 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:56:06.012 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:56:06.015 | ERROR    | backend.app.core.database:close_connection:47 - Error closing connection to DB: %s
+2024-07-18 13:57:43.524 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 13:57:46.157 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 13:57:46.614 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 13:57:46.617 | DEBUG    | backend.app.core.database:get_data:62 - Executed query: %s
+2024-07-18 13:57:46.619 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 13:57:48.473 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 13:57:48.473 | ERROR    | backend.app.core.database:close_connection:47 - Error closing connection to DB: %s. Exception: %s
+2024-07-18 14:00:13.571 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:00:18.253 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:00:18.821 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 14:00:18.824 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 14:00:18.826 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:00:20.684 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:04:18.289 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:04:22.367 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:04:22.367 | ERROR    | backend.app.core.database:get_data:70 - Unexpected error: %s
+2024-07-18 14:04:22.381 | ERROR    | backend.app.handlers.clicker_handlers:get_info_by_user_id:34 - Ошибка при получении информации о пользователе: 'Database' object has no attribute 'pool'
+2024-07-18 14:04:24.154 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:04:24.154 | ERROR    | backend.app.core.database:get_data:70 - Unexpected error: %s
+2024-07-18 14:04:24.154 | ERROR    | backend.app.handlers.clicker_handlers:get_info_by_user_id:34 - Ошибка при получении информации о пользователе: 'Database' object has no attribute 'pool'
+2024-07-18 14:07:25.749 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:07:44.271 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:07:48.840 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:07:49.343 | INFO     | backend.app.core.database:create_pool:44 - Connection to DB is created
+2024-07-18 14:07:49.358 | DEBUG    | backend.app.core.database:get_data:66 - Executed query: %s
+2024-07-18 14:07:49.358 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:07:51.497 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:07:51.497 | ERROR    | backend.app.core.database:close_connection:54 - Error closing connection to DB: %s. Exception: %s
+2024-07-18 14:07:51.514 | DEBUG    | backend.app.core.database:close_connection:55 - Additional info about the error: %s
+2024-07-18 14:08:58.415 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:09:00.759 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:09:00.762 | WARNING  | backend.app.core.database:close_connection:57 - Trying to close a non-open connection
+2024-07-18 14:10:07.142 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:10:08.724 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:10:08.724 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:10:14.126 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:10:16.227 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:10:16.649 | INFO     | backend.app.core.database:create_pool:44 - Connection to DB is created
+2024-07-18 14:10:16.652 | DEBUG    | backend.app.core.database:get_data:70 - Executed query: %s
+2024-07-18 14:10:16.653 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:10:19.781 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:10:19.788 | ERROR    | backend.app.core.database:close_connection:57 - Unexpected error closing connection to DB: %s. Exception: %s
+2024-07-18 14:10:19.789 | DEBUG    | backend.app.core.database:close_connection:58 - Additional info about the error: %s
+2024-07-18 14:11:57.302 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:12:00.626 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:12:01.032 | INFO     | backend.app.core.database:create_pool:44 - Connection to DB is created
+2024-07-18 14:12:01.034 | DEBUG    | backend.app.core.database:get_data:71 - Executed query: %s
+2024-07-18 14:12:01.035 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:12:03.151 | WARNING  | __main__:<module>:17 - Сервер был остановлен разработчиком
+2024-07-18 14:12:03.155 | ERROR    | backend.app.core.database:close_connection:57 - Unexpected error closing connection to DB: %s. Exception: %s
+2024-07-18 14:12:03.156 | DEBUG    | backend.app.core.database:close_connection:58 - Additional info about the error: %s
+2024-07-18 14:17:54.722 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:17:54.722 | ERROR    | __main__:main:16 - Ошибка при старте сервера: asyncio.run() cannot be called from a running event loop
+2024-07-18 14:17:54.722 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:18:36.186 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:18:36.190 | ERROR    | __main__:main:16 - Ошибка при старте сервера: asyncio.run() cannot be called from a running event loop
+2024-07-18 14:18:36.190 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:19:30.821 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:19:30.825 | ERROR    | __main__:main:16 - Ошибка при старте сервера: asyncio.run() cannot be called from a running event loop
+2024-07-18 14:19:30.827 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:21:08.887 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:21:08.887 | ERROR    | __main__:main:16 - Ошибка при старте сервера: asyncio.run() cannot be called from a running event loop
+2024-07-18 14:21:08.887 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:22:25.786 | INFO     | backend.start_app:start_app:13 - Старт сервера...
+2024-07-18 14:22:25.786 | ERROR    | __main__:main:16 - Ошибка при старте сервера: asyncio.run() cannot be called from a running event loop
+2024-07-18 14:22:25.786 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:24:56.849 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:25:00.925 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:25:01.468 | INFO     | backend.app.core.database:create_pool:44 - Connection to DB is created
+2024-07-18 14:25:01.470 | DEBUG    | backend.app.core.database:get_data:71 - Executed query: %s
+2024-07-18 14:25:01.473 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:25:03.406 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:25:46.890 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:25:46.897 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 14:25:46.897 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:40:08.039 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:40:08.039 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 14:40:08.055 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:40:28.602 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:40:28.634 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов:
+2024-07-18 14:40:28.639 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:41:08.886 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:41:08.890 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов:
+2024-07-18 14:41:08.894 | WARNING  | backend.app.core.database:close_connection:60 - Trying to close a non-open connection
+2024-07-18 14:49:14.829 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:49:18.168 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:49:18.168 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 14:49:32.856 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:49:35.319 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:49:35.831 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 14:49:35.831 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 14:49:35.831 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:49:38.209 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:49:38.209 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 14:52:29.608 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:52:32.062 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:52:32.493 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 14:52:32.495 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 14:52:32.497 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:52:34.495 | WARNING  | backend.start_app:start_app:17 - Сервер остановлен разработчиком
+2024-07-18 14:52:34.495 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 14:57:36.863 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:57:38.425 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:57:38.425 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 14:58:34.912 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:58:39.283 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:58:40.154 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 14:58:40.157 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 14:58:40.160 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:58:43.471 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:58:43.471 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 14:59:09.141 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:59:12.915 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:59:13.359 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 14:59:13.362 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 14:59:13.363 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 14:59:14.898 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 14:59:50.669 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 14:59:53.474 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 14:59:54.048 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 14:59:54.051 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 14:59:54.054 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 15:00:32.507 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 15:05:15.629 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:05:15.634 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:05:15.634 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:06:32.580 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:06:32.591 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:06:32.596 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:08:21.618 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:08:21.618 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:08:21.631 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:09:56.521 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:09:56.524 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:09:56.529 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:10:58.389 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:11:00.402 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 15:11:00.405 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:11:12.568 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:11:37.278 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 15:11:38.066 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 15:11:38.071 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 15:11:38.073 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 15:11:42.876 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 15:14:40.240 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:14:40.243 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:15:22.534 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:15:35.503 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 15:15:36.260 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 15:15:36.264 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 15:15:36.265 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 15:15:38.796 | WARNING  | backend.start_app:start_app:17 - Сервер остановлен
+2024-07-18 15:18:42.616 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:18:42.616 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:18:42.616 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:27:41.049 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:27:41.049 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:27:41.049 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:29:21.940 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:29:21.940 | ERROR    | backend.start_app:start_app:28 - Ошибка при старте серверов: %s
+2024-07-18 15:29:21.940 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:29:42.393 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:29:42.408 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:30:52.857 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:30:52.867 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:31:22.036 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:31:22.041 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:32:27.512 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:32:27.512 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:34:20.638 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:34:20.644 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:35:13.055 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:35:13.072 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:36:46.517 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:36:46.532 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:37:22.507 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:37:22.509 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:42:34.398 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:42:34.402 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:48:15.705 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:48:15.705 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:49:14.613 | INFO     | backend.start_app:start_app:22 - Старт сервера...
+2024-07-18 15:49:14.613 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:50:59.707 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:51:30.712 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 15:51:31.506 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 15:51:31.509 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 15:51:31.511 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 15:51:35.033 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 15:52:18.691 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:52:18.691 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:52:18.691 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:52:35.218 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:52:35.222 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:52:35.226 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:53:08.576 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:53:08.579 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:53:08.583 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:54:01.164 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:54:01.169 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:54:13.744 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:54:13.748 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:54:13.751 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 15:54:35.188 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:54:35.193 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:56:18.490 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 15:56:18.506 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 15:56:18.507 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 16:02:20.315 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 16:02:23.928 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 16:02:24.517 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 16:02:24.517 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 16:02:24.533 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 16:02:27.432 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 16:02:55.176 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 16:02:57.512 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 16:02:57.528 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 16:56:44.884 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 16:56:47.112 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 16:56:47.112 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 17:51:25.869 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:51:28.094 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 17:51:28.094 | WARNING  | backend.app.core.database:close_connection:43 - Trying to close a non-open connection
+2024-07-18 17:51:35.168 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:51:43.085 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 17:51:43.653 | INFO     | backend.app.core.database:create_pool:34 - Connection to DB is created
+2024-07-18 17:51:43.663 | DEBUG    | backend.app.core.database:get_data:52 - Executed query: %s
+2024-07-18 17:51:43.665 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 17:51:46.183 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 17:51:46.191 | INFO     | backend.app.core.database:close_connection:41 - Connection to DB is closed
+2024-07-18 17:52:39.324 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:52:43.865 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 17:52:44.714 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 17:52:44.718 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 17:52:44.720 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 17:52:46.135 | WARNING  | backend.start_app:start_app:17 - Сервера остановлены
+2024-07-18 17:54:05.545 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:54:05.549 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 17:54:05.552 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 17:54:36.780 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:54:36.784 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 17:54:36.805 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 17:57:28.304 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:57:28.309 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 17:57:28.313 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 17:58:12.616 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:58:12.616 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 17:58:12.627 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 17:58:38.868 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 17:58:38.871 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 17:58:38.874 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:03:30.459 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 18:03:30.474 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 18:03:30.474 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:03:55.349 | INFO     | backend.start_app:start_app:14 - Старт сервера...
+2024-07-18 18:03:55.349 | ERROR    | backend.start_app:start_app:19 - Ошибка при старте серверов: %s
+2024-07-18 18:03:55.349 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:06:06.576 | INFO     | backend.start_app:start_app:7 - Старт сервера...
+2024-07-18 18:06:06.592 | ERROR    | __main__:<module>:17 - Ошибка при старте серверов: %s
+2024-07-18 18:06:06.592 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:06:43.054 | ERROR    | __main__:<module>:17 - Ошибка при старте серверов: %s
+2024-07-18 18:06:43.070 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:10:01.814 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 18:10:01.816 | ERROR    | backend.start_app:start_app:15 - Ошибка при старте сервера: %s
+2024-07-18 18:10:01.816 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:10:43.500 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 18:10:43.500 | ERROR    | backend.start_app:start_app:15 - Ошибка при старте сервера: %s
+2024-07-18 18:10:43.516 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:13:03.287 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 18:13:03.288 | ERROR    | backend.start_app:start_app:16 - Ошибка при старте сервера: %s
+2024-07-18 18:13:03.289 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:15:55.641 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 18:16:00.073 | WARNING  | backend.start_app:start_app:13 - Сервер остановлен
+2024-07-18 18:16:00.075 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection
+2024-07-18 18:16:27.735 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 18:16:30.955 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:13 - Получаем инфу про пользователя из бд(clicker)
+2024-07-18 18:16:31.491 | INFO     | backend.app.core.database:create_pool:35 - Connection to DB is created
+2024-07-18 18:16:31.496 | DEBUG    | backend.app.core.database:get_data:53 - Executed query: %s
+2024-07-18 18:16:31.497 | INFO     | backend.app.handlers.clicker_handlers:get_info_by_user_id:20 - Пользователь уже есть, отправляем данные
+2024-07-18 18:16:33.906 | WARNING  | backend.start_app:start_app:13 - Сервер остановлен
+2024-07-18 23:06:07.768 | INFO     | backend.start_app:start_app:10 - Старт сервера...
+2024-07-18 23:06:10.221 | WARNING  | backend.start_app:start_app:13 - Сервер остановлен
+2024-07-18 23:06:10.221 | WARNING  | backend.app.core.database:close_connection:44 - Trying to close a non-open connection

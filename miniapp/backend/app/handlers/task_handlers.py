@@ -4,6 +4,10 @@ from ... import logger
 data=Database()
 
 class TaskHandler():
+    """
+    Обработчик для страницы тасков.
+    Отвечает за выполнение таска.
+    """
     async def try_do_task(self,user_id, task_in_db, task_price):
         try:
             logger.info("Попытка сделать таск. Проверка на вхождение пользователя в бд")

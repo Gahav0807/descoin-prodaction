@@ -1,4 +1,5 @@
 import os
+import asyncio
 import asyncpg
 from asyncpg import PostgresError
 from ... import logger
@@ -36,7 +37,7 @@ class Database:
 
     def close_connection(self):
         if self.pool:
-            self.pool.close()
+            asyncio.run(self.pool.close())
             self.pool = None
             logger.info("Connection to DB is closed")
         else:

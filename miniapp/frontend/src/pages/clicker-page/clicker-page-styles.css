@@ -74,7 +74,7 @@ span.progress {
   left: 50%;
   width: 320px;
   height: 320px;
-  background-image: url("../des_logo_320x320.jpg");
+  /* background-image: url("./images/des_logo_320x320.jpg"); */
   background-color: rgb(20, 208, 241);
   border: none;
   border-radius: 100%;
@@ -85,6 +85,10 @@ span.progress {
   /* Центрирование с помощью margin */
   margin-top: -160px; /* Половина высоты кнопки */
   margin-left: -160px; /* Половина ширины кнопки */
+}
+
+#button img{
+  border-radius: 100%;
 }
 
 #counter{

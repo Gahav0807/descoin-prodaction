@@ -1,10 +1,10 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
 
 const limitOfClicks = 10000;
-const DEG = 40;
 
 export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
@@ -28,6 +28,10 @@ export default function ClickerPage() {
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
+          setUserId(undefined);
+          setBalance(0);
+          setLimitClicks(10000);
+          setProgress(0);
           toast.error("Error on server side. Try later");
         });
     } else {
@@ -105,7 +109,14 @@ export default function ClickerPage() {
 
       <div id="counter">{balance ?? 0}</div>
 
-      <button id="button" onClick={handleClick}></button>
+      <button id="button" onClick={handleClick}>
+      <img
+        src="/images/des_logo_320x320.jpg"
+        alt="My Image"
+        width={320}
+        height={320}
+      />
+      </button>
 
       <div id="limit_display">
         {limitClicks}/{limitOfClicks}⚡️

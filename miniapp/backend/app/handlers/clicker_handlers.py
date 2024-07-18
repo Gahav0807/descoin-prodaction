@@ -4,6 +4,10 @@ from ... import logger
 data=Database()
 
 class ClickerHandler():
+    """
+    Обработчик для страницы кликера.
+    Отвечает за получение данных пользователя,их сохранение
+    """
     async def get_info_by_user_id(self, user_id):
             try:
                 logger.info("Получаем инфу про пользователя из бд(clicker)")

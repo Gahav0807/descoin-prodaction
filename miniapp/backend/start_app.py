@@ -1,23 +1,17 @@
-import asyncio
-from  .app.core.database import Database
 from .app.server import Server
 from . import logger
+from  .app.core.database import Database
 
-data = Database()
 server = Server()
+data = Database()
 
 def start_app():
-    """
-    Запускает сервер.
-    """
     try:
         logger.info("Старт сервера...")
         server.run()
     except KeyboardInterrupt:
-        logger.warning("Сервера остановлены")
+        logger.warning("Сервер остановлен")
     except Exception as e:
-        logger.error("Ошибка при старте серверов: %s", e)
+        logger.error("Ошибка при старте сервера: %s", e)
     finally:
         data.close_connection()
-
-
