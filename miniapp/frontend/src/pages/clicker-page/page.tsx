@@ -59,7 +59,7 @@ export default function ClickerPage() {
   }, [balance, limitClicks, userId]);
 
   /* Логика кликера */
-  const handleClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     // анимация
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -110,7 +110,7 @@ export default function ClickerPage() {
       <div id="counter">{balance ?? 0}</div>
 
       <button id="button" onClick={handleClick}>
-      <img
+      <Image
         src="/images/des_logo_320x320.jpg"
         alt="My Image"
         width={320}
