@@ -10,7 +10,6 @@ type Friend = {
 
 export default function RefPage() {
   const [userName, setUserName] = useState<string | undefined>(undefined);
-  const [userId, setUserId] = useState<number | undefined>(undefined);
   const [linkToCopy, setLinkToCopy] = useState<string>('');
   const [friends, setFriends] = useState<Friend[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -22,15 +21,6 @@ export default function RefPage() {
       toast.success("Link copied to clipboard!");
     }
   };
-
-  // тестовые данные
-  // useEffect(() => {
-  //     setUserName("yamal");
-  //     setLinkToCopy(`https://t.me/bot_name?start=${1573326140}`);
-
-  //     getReferals(1573326140);
-  //     setIsLoading(false);
-  // }, []);
 
   /* Получение списка рефералов при входе в приложение */
   useEffect(() => {

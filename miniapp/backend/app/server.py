@@ -7,6 +7,10 @@ from .routers.ref_router import router as ref_router
 from .routers.task_router import router as task_router
 
 class Server:
+    """
+    Монолитный сервер, обрабатывающий запросы от клиентской части
+    """
+    
     def __init__(self):
         self.app = FastAPI()
 
