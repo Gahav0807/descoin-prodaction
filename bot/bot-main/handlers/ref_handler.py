@@ -5,7 +5,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram import types
 from aiogram import Router
 from aiogram.filters import Command
-from ..utils.buttons import *
+from ..utils.tg_bot.buttons import *
 from ..core.database import BotDatabase 
 from .. import bot
 

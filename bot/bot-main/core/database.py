@@ -33,9 +33,9 @@ class BotDatabase:
             logger.info("Connection to DB is created")
         return self.pool
 
-    def close_connection(self):
+    async def close_connection(self):
         if self.pool:
-            asyncio.run(self.pool.close())
+            await self.pool.close()
             self.pool = None
             logger.info("Connection to DB is closed")
         else:

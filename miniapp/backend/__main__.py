@@ -1,9 +1,21 @@
 """
+
 starting backend
+
 """
-import asyncio
-from .start_app import start_app
+from .app.server import Server
+from . import logger
+from  .app.core.database import Database
+
+server = Server()
 
 if __name__ == "__main__":
-   asyncio.create_task(start_app())
-
+   try:
+      logger.info("Старт сервера...")
+      server.run()
+   except KeyboardInterrupt:
+      logger.warning("Сервер остановлен")
+   except Exception as e:
+      logger.error("Ошибка при старте сервера: %s", e)
+   
+   

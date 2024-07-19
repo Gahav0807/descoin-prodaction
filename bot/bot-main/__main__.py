@@ -1,11 +1,15 @@
 """
 
-starting bot
+starting telegram-bot
 
 """
 import asyncio
 from .bot import start_bot
+from . import logger
+from . import bot,dp
 
 if __name__ == "__main__":
-   asyncio.create_task(asyncio.run(start_bot()))
+   asyncio.run(start_bot())
+   
+
    

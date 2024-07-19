@@ -35,13 +35,14 @@ class Database:
             logger.info("Connection to DB is created")
         return self.pool
 
-    def close_connection(self):
-        if self.pool:
-            asyncio.run(self.pool.close())
+    async def close_connection(self):
+        if not asyncio.get_event_loop().is_closed():  # Проверьте, открыт ли цикл
+          if self.pool:
+            await self.pool.close()
             self.pool = None
             logger.info("Connection to DB is closed")
         else:
-            logger.warning("Trying to close a non-open connection")
+          logger.warning("Event loop is closed, skipping pool close")
 
     async def get_data(self, query):
         try:
