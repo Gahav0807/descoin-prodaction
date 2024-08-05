@@ -1,11 +1,10 @@
-import asyncio
 from . import logger
-from aiogram import Bot,Dispatcher
 from .handlers.ref_handler import ref_router
-from .core.database import BotDatabase
+from .handlers.broadcast_handler import broadcast_router
 from . import bot,dp
 
 dp.include_router(ref_router)
+dp.include_router(broadcast_router)
 
 async def start_bot():
     """

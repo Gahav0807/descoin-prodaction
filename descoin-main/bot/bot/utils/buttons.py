@@ -15,10 +15,10 @@ async def start_keyboard():
 
 confirm_post_buttons = [
         [
-            types.InlineKeyboardButton(text="Да🔥", callback_data="send_post_confrim"),
+            types.InlineKeyboardButton(text="Да🔥", callback_data="confirm_send_post"),
         ],
         [
-            types.InlineKeyboardButton(text="Нет💔", callback_data="cancel_post_confirm"),
+            types.InlineKeyboardButton(text="Нет💔", callback_data="cancel_send_post"),
         ]
     ]
     
