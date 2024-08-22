@@ -28,7 +28,7 @@ export default function RefPage() {
     if (user && user.id) {
       
       setUserName(user.username);
-      setLinkToCopy(`https://t.me/bot_name?start=${user.id}`);
+      setLinkToCopy(`https://t.me/Descoinoff_bot?start=${user.id}`);
 
       getReferals(user.id);
       setIsLoading(false);
@@ -44,7 +44,7 @@ export default function RefPage() {
   async function getReferals(userId: number) {
     try {
       // Perform request to server to get list of referrals by userId
-      const response = await fetch(`http://localhost:9000/getReferals/${userId}`);
+      const response = await fetch(`https://api.descoin-web.online/getReferals/${userId}`);
       const data = await response.json();
       setFriends(data);
     } catch (error) {

@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./miniapp/backend
+      dockerfile: backend.dockerfile
+    container_name: backend
+    ports:
+      - "3001:3001"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - .:/app
+      - /app/node_modules
+    networks:
+      - app-network
+    restart: always
+    
+  frontend:
+    build:
+      context: ./miniapp/frontend
+      dockerfile: frontend.dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+  bot:
+    build:
+      context: ./telegram_bot/bot
+      dockerfile: bot.dockerfile
+    container_name: bot
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "80:80"   # HTTP
+      - "443:443"  # HTTPS
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt/live/descoin-web.online/fullchain.pem:/etc/nginx/ssl/fullchain.pem
+      - /etc/letsencrypt/live/descoin-web.online/privkey.pem:/etc/nginx/ssl/privkey.pem
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

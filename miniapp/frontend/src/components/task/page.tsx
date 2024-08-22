@@ -19,7 +19,7 @@ export default function Task({
   // Function to send a request to complete the task
   const tryDoTask = async () => {
     try {
-      await fetch(`http://127.0.0.1:9000/tryDoTask/${user_id}/${task_in_db}/${task_price}`);
+      await fetch(`https://api.descoin-web.online/tryDoTask/${user_id}/${task_in_db}/${task_price}`);
     } catch (error) {
       console.error(error);
     }

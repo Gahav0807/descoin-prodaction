@@ -82,7 +82,7 @@ export default function ClickerPage() {
   /* Хендлеры */
   async function getDataFromServerById(userId: number) {
     try {
-      const response = await fetch(`http://localhost:9000/getInfo/${userId}`);
+      const response = await fetch(`https://api.descoin-web.online/getInfo/${userId}`);
       const data = await response.json();
       return { wallet: data.wallet, limit_clicks: data.limit_clicks };
     } catch (error) {
@@ -93,7 +93,7 @@ export default function ClickerPage() {
 
   async function updateDataOnServer(userId: number, balance: number, limitClicks: number) {
     try {
-      await fetch(`http://localhost:9000/updateInfo/${userId}/${balance}/${limitClicks}`);
+      await fetch(`https://api.descoin-web.online/updateInfo/${userId}/${balance}/${limitClicks}`);
     } catch (error) {
       console.error('Error updating data:', error);
     }

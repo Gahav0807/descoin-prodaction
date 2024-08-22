@@ -31,30 +31,9 @@ export default function TaskPage() {
           <>
             <Task
               task_in_db="task1"
-              task_name="Youtube"
-              task_price={50000}
-              url_of_btn="https://youtube.com"
-              user_id={Number(userId)}
-            />
-            <Task
-              task_in_db="task2"
               task_name="Telegram"
               task_price={50000}
-              url_of_btn="https://youtube.com"
-              user_id={Number(userId)}
-            />
-            <Task
-              task_in_db="task3"
-              task_name="Instagram"
-              task_price={50000}
-              url_of_btn="https://youtube.com"
-              user_id={Number(userId)}
-            />
-            <Task
-              task_in_db="task4"
-              task_name="VK"
-              task_price={50000}
-              url_of_btn="https://youtube.com"
+              url_of_btn="https://t.me/descoin_official"
               user_id={Number(userId)}
             />
           </>
