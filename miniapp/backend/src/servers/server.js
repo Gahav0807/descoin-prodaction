@@ -33,8 +33,8 @@ class Server {
   }
 
   run() {
-    this.server = this.app.listen(9000, '127.0.0.1', () => {
-      console.log('Server is running on http://127.0.0.1:9000');
+    this.server = this.app.listen(3001, '0.0.0.0', () => {
+      console.log('Server is running on http://0.0.0.0:3001');
     });
 
     process.on('SIGINT', () => {

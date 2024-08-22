@@ -9,7 +9,7 @@ dp.include_router(broadcast_router)
 
 async def start_bot() -> None:
     try:
-        logger.info("Starting the bot...")
+        logger.debug("Starting the bot...")
         await dp.start_polling(bot)
     except (KeyboardInterrupt, asyncio.CancelledError):
         logger.warning("Bot stopped")
