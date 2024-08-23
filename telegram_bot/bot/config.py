@@ -9,8 +9,8 @@ log_file_path = os.path.join(base_dir, "utils", "logs", "bot", "bot.log")
 
 logger.add(log_file_path, rotation="100 MB", compression="zip")
 
-ADMINS_ID=[445107195]
-TOKEN = "7326805025:AAGtMCxcdIdyUUODgqj7NafG0lI45WefsWo"
+ADMINS_ID=[6990335536,1032148889,1110220128]
+TOKEN = "7530290987:AAGZG8G3S9Os_ctntiJmWxxW73lLG26wpg4"
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(

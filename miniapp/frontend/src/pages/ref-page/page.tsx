@@ -28,7 +28,7 @@ export default function RefPage() {
     if (user && user.id) {
       
       setUserName(user.username);
-      setLinkToCopy(`https://t.me/Descoinoff_bot?start=${user.id}`);
+      setLinkToCopy(`https://t.me/Descoin_official_bot?start=${user.id}`);
 
       getReferals(user.id);
       setIsLoading(false);
