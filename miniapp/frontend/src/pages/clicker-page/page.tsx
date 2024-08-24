@@ -9,6 +9,7 @@ const limitOfClicks = 10000;
 export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
   const [balance, setBalance] = useState<number | null>(null);
+  const [currentClicks, setCurrentClicks] = useState<number | null>(0);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
   
@@ -23,62 +24,45 @@ export default function ClickerPage() {
           setBalance(wallet);
           setLimitClicks(limit_clicks);
 
-          // Настраиваем поведение закрытия приложения
-          window.Telegram.WebApp.setClosingBehavior({
-            behavior: 'confirm',
-            onClose: () => {
-              updateDataOnServer(user.id, wallet, limit_clicks)
-                .then(() => {
-                  window.Telegram.WebApp.close();
-                })
-                .catch((error) => {
-                  console.error('Error updating data:', error);
-                  toast.error('Error saving data. Please try again later.');
-                });
-            },
-          });
+          const progressPercentage = (limit_clicks / limitOfClicks) * 100;
+          setProgress(progressPercentage);
+
+          window.Telegram.WebApp.expand()
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
           setUserId(undefined);
           setBalance(0);
           setLimitClicks(10000);
-          toast.error('Error on server side. Try later');
+          setProgress(0);
+          toast.error("Error on server side. Try later");
         });
     } else {
       setUserId(undefined);
       setBalance(0);
       setLimitClicks(10000);
-      toast.error('Error on Telegram side! Try later');
+      setProgress(0);
+      toast.error("Error on Telegram side! Try later");
     }
-
-    // Resets closing behavior when component unmounts
-    return () => {
-      window.Telegram.WebApp.setClosingBehavior({
-        behavior: 'close',
-        onClose: () => {},
-      });
-    };
   }, []);
 
+  /* Обновляем данные пользователя каждые 5 сек, если он был в них активен 
+    Переменная currentClicks засчитывает каждое нажатие в нынешнем сеансе, 
+    если в предыдущие 5 сек пользователь был активен, его данные обновляются в БД,
+    иначе ничего не делаем
+  */
+  setInterval(() => {
+    if(currentClicks > 0) {
+      updateDataOnServer(userId, balance, limitClicks)
+        .catch((error) => {
+          console.error('Error updating data:', error);
+        });
+    setCurrentClicks(0);
+    } 
+  }, 5000);
 
-   /* Включаем подтверждение закрытия и обрабатываем обновление данных */
-   useEffect(() => {
-    if (balance !== null && limitClicks !== null && userId !== undefined) {
-      const handleViewportChanged = () => {
-        updateDataOnServer(userId, balance, limitClicks);
-      };
-      window.Telegram.WebApp.onEvent('viewportChanged', handleViewportChanged);
-
-      return () => {
-        window.Telegram.WebApp.offEvent('viewportChanged', handleViewportChanged);
-      };
-    }
-  }, [balance, limitClicks, userId]);
-
-  /* Логика кликера */
+  /* Логика кликера, анимация при нажатии */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // анимация
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
@@ -95,9 +79,10 @@ export default function ClickerPage() {
 
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
+    setCurrentClicks((prevCurrentClicks) => (prevCurrentClicks ?? 0) + 1);
   };
 
-  /* Хендлеры */
+  /* Хендлеры по запросам на сервер */
   async function getDataFromServerById(userId: number) {
     try {
       const response = await fetch(`https://api.descoin-web.online/getInfo/${userId}`);
