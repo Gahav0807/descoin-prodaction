@@ -64,11 +64,11 @@ export default function ClickerPage() {
           });
       };
 
-      window.Telegram.WebApp.onEvent('close', handleUpdateOnClose);
+      window.addEventListener('beforeunload', handleUpdateOnClose);
 
       // Очищаем событие при размонтировании компонента
       return () => {
-        window.Telegram.WebApp.offEvent('close', handleUpdateOnClose);
+        window.removeEventListener('beforeunload', handleUpdateOnClose);
       };
     }
   }, [balance, limitClicks, userId]);
