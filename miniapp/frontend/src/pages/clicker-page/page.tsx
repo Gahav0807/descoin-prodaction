@@ -45,18 +45,26 @@ export default function ClickerPage() {
 
   /* Обновляем данные пользователя при выходе с страницы */
   useEffect(() => {
-    if (balance !== null && limitClicks !== null && userId !== undefined) {
-      const handleUnload = () => {
+    // Функция для обновления данных на сервере
+    const updateUserData = () => {
+      if (userId !== undefined && balance !== null && limitClicks !== null) {
         updateDataOnServer(userId, balance, limitClicks);
-      };
+      }
+    };
 
-      window.addEventListener('beforeunload', handleUnload);
-
-      return () => {
-        window.removeEventListener('beforeunload', handleUnload);
-      };
+    // Проверяем, что API доступно
+    if (window.Telegram.WebApp) {
+      // Подписываемся на событие закрытия приложения
+      window.Telegram.WebApp.onEvent('web_app_close', updateUserData);
     }
-  }, [balance, limitClicks, userId]);
+
+    return () => {
+      // Отписываемся от события при размонтировании компонента
+      if (window.Telegram.WebApp) {
+        window.Telegram.WebApp.offEvent('web_app_close', updateUserData);
+      }
+    };
+  }, [userId, balance, limitClicks]);
 
   /* Логика кликера */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
