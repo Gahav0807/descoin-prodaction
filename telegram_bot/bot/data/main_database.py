@@ -25,10 +25,10 @@ class BotDatabase:
     async def create_pool(self):
         if self.pool is None:
             self.pool = await asyncpg.create_pool(
-                user="gen_user",
-                password="290lCx8|3_2:nu",
-                database="default_db",
-                host="192.168.0.4"
+                user=os.getenv('PGUSER'),
+                password=os.getenv('PGPASSWORD'),
+                database=os.getenv('PGDATABASE'),
+                host=os.getenv('PGHOST')
             )
             logger.info("Connection to DB is created")
         return self.pool
@@ -39,7 +39,7 @@ class BotDatabase:
             self.pool = None
             logger.info("Connection to DB is closed")
         else:
-            print("Trying to close a non-open connection")
+            logger.warning("Trying to close a non-open connection")
 
     async def add_ref_node(self, referent_id, referal_id, referal_name):
         try:
@@ -52,9 +52,9 @@ class BotDatabase:
 
                     logger.debug("Добавлен реферальный-узел!")
         except PostgresError as e:
-            print("Error while fetching list: %s", e)
+            logger.error("Error while fetching list: %s", e)
         except Exception as e:
-            print("Unexpected error: %s", e)
+            logger.error("Unexpected error: %s", e)
             raise e from e
         
     async def is_user_referal(self, user_id):
@@ -73,8 +73,8 @@ class BotDatabase:
                         logger.info("Юзер является рефералом")
                         return True
         except PostgresError as e:
-            print("Error while fetching list: %s", e)
+            logger.error("Error while fetching list: %s", e)
         except Exception as e:
-            print("Unexpected error: %s", e)
+            logger.error("Unexpected error: %s", e)
             raise e from e
     

@@ -15,7 +15,8 @@ export default function ClickerPage() {
   
   /* При заходе в приложение получаем данные пользователя с сервера */
   useEffect(() => {
-    const { user } = window.Telegram.WebApp.initDataUnsafe;
+    const tg  = window.Telegram.WebApp;
+    const { user } = tg.initDataUnsafe;
     if (user && user.id) {
       setUserId(user.id);
 
@@ -27,7 +28,8 @@ export default function ClickerPage() {
           const progressPercentage = (limit_clicks / limitOfClicks) * 100;
           setProgress(progressPercentage);
 
-          window.Telegram.WebApp.expand()
+          tg.expand()
+          tg.enableClosingConfirmation();
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
