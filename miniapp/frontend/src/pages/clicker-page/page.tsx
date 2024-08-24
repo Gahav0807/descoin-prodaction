@@ -25,6 +25,8 @@ export default function ClickerPage() {
 
           const progressPercentage = (limit_clicks / limitOfClicks) * 100;
           setProgress(progressPercentage);
+
+          window.Telegram.WebApp.expand();
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
@@ -41,35 +43,28 @@ export default function ClickerPage() {
       setProgress(0);
       toast.error("Error on Telegram side! Try later");
     }
-  
-    /* Обновляем данные пользователя при выходе из приложения */
-    const handleViewportChanged = () => {
-      if (balance !== null && limitClicks !== null && userId !== undefined) {
-        updateDataOnServer(userId, balance, limitClicks);
-      }
-    };
-
-    window.Telegram.WebApp.onEvent('viewportChanged', handleViewportChanged);
-
-    return () => {
-      window.Telegram.WebApp.offEvent('viewportChanged', handleViewportChanged);
-    }
   }, []);
 
   /* Обновляем данные пользователя при выходе с страницы */
-  // useEffect(() => {
-  //   if (balance !== null && limitClicks !== null && userId !== undefined) {
-  //     const updateUserData = () => {
-  //       updateDataOnServer(userId, balance, limitClicks);
-  //     };
+  useEffect(() => {
+    if (balance !== null && limitClicks !== null && userId !== undefined) {
+      const updateUserData = () => {
+        updateDataOnServer(userId, balance, limitClicks);
+      };
 
-  //     window.addEventListener('unload', updateUserData);
+      window.Telegram.WebApp.onEvent('viewportChanged', updateUserData);
 
-  //     return () => {
-  //       window.removeEventListener('unload', updateUserData);
-  //     };
-  //   }
-  // }, [balance, limitClicks, userId]);
+      return () => {
+        window.Telegram.WebApp.offEvent('viewportChanged', updateUserData);
+      };
+
+      // window.addEventListener('beforeunload', updateUserData);
+
+      // return () => {
+      //   window.removeEventListener('beforeunload', updateUserData);
+      // };
+    }
+  }, [balance, limitClicks, userId]);
 
   /* Логика кликера */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
