@@ -41,23 +41,35 @@ export default function ClickerPage() {
       setProgress(0);
       toast.error("Error on Telegram side! Try later");
     }
+  
+    /* Обновляем данные пользователя при выходе из приложения */
+    const handleViewportChanged = () => {
+      if (balance !== null && limitClicks !== null && userId !== undefined) {
+        updateDataOnServer(userId, balance, limitClicks);
+      }
+    };
+
+    window.Telegram.WebApp.onEvent('viewportChanged', handleViewportChanged);
+
+    return () => {
+      window.Telegram.WebApp.offEvent('viewportChanged', handleViewportChanged);
+    }
   }, []);
 
   /* Обновляем данные пользователя при выходе с страницы */
-  /* Обновляем данные пользователя при выходе с страницы */
-  useEffect(() => {
-    if (balance !== null && limitClicks !== null && userId !== undefined) {
-      const updateUserData = () => {
-        updateDataOnServer(userId, balance, limitClicks);
-      };
+  // useEffect(() => {
+  //   if (balance !== null && limitClicks !== null && userId !== undefined) {
+  //     const updateUserData = () => {
+  //       updateDataOnServer(userId, balance, limitClicks);
+  //     };
 
-      window.addEventListener('unload', updateUserData);
+  //     window.addEventListener('unload', updateUserData);
 
-      return () => {
-        window.removeEventListener('unload', updateUserData);
-      };
-    }
-  }, [balance, limitClicks, userId]);
+  //     return () => {
+  //       window.removeEventListener('unload', updateUserData);
+  //     };
+  //   }
+  // }, [balance, limitClicks, userId]);
 
   /* Логика кликера */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
