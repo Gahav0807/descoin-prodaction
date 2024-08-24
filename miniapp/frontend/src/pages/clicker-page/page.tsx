@@ -51,15 +51,19 @@ export default function ClickerPage() {
     если в предыдущие 5 сек пользователь был активен, его данные обновляются в БД,
     иначе ничего не делаем
   */
-  setInterval(() => {
-    if(currentClicks > 0) {
-      updateDataOnServer(userId, balance, limitClicks)
-        .catch((error) => {
-          console.error('Error updating data:', error);
-        });
-    setCurrentClicks(0);
-    } 
-  }, 5000);
+  useEffect(() => {
+    if (balance !== null && limitClicks !== null && userId !== undefined) {
+      const updateUserData = () => {
+        updateDataOnServer(userId, balance, limitClicks);
+      };
+      setInterval(() => {
+        if(currentClicks > 0) {
+          updateUserData()
+          setCurrentClicks(0);
+        } 
+      }, 5000);
+    }
+  }, [balance, limitClicks, userId]);
 
   /* Логика кликера, анимация при нажатии */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
