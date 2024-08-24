@@ -46,15 +46,15 @@ export default function ClickerPage() {
   /* Обновляем данные пользователя при выходе с страницы */
   /* Обновляем данные пользователя при выходе с страницы */
   useEffect(() => {
-    if (balance !== null && limitClicks !== null && userId !== undefined && window.Telegram.WebApp) {
+    if (balance !== null && limitClicks !== null && userId !== undefined) {
       const updateUserData = () => {
         updateDataOnServer(userId, balance, limitClicks);
       };
 
-      window.Telegram.WebApp.onEvent('web_app_close', updateUserData);
+      window.addEventListener('unload', updateUserData);
 
       return () => {
-        window.Telegram.WebApp.offEvent('web_app_close', updateUserData);
+        window.removeEventListener('unload', updateUserData);
       };
     }
   }, [balance, limitClicks, userId]);
