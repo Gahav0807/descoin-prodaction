@@ -54,7 +54,7 @@ export default function ClickerPage() {
   } else {
     router.push('/error-page')
   }
-  }, []);
+  }, [router]);
 
   /* Обновляем данные пользователя каждые 5 сек, если он был в них активен 
     Переменная currentClicks засчитывает каждое нажатие в нынешнем сеансе, 
