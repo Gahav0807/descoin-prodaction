@@ -52,17 +52,11 @@ export default function ClickerPage() {
         updateDataOnServer(userId, balance, limitClicks);
       };
 
-      window.Telegram.WebApp.onEvent('viewportChanged', updateUserData);
+      window.Telegram.WebApp.onEvent('close', updateUserData);
 
       return () => {
-        window.Telegram.WebApp.offEvent('viewportChanged', updateUserData);
+        window.Telegram.WebApp.onEvent('close', updateUserData);
       };
-
-      // window.addEventListener('beforeunload', updateUserData);
-
-      // return () => {
-      //   window.removeEventListener('beforeunload', updateUserData);
-      // };
     }
   }, [balance, limitClicks, userId]);
 
