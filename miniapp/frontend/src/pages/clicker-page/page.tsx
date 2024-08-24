@@ -27,7 +27,7 @@ export default function ClickerPage() {
           window.Telegram.WebApp.setClosingBehavior({
             behavior: 'confirm',
             onClose: () => {
-              updateDataOnServer(userId, balance, limitClicks)
+              updateDataOnServer(user.id, wallet, limit_clicks)
                 .then(() => {
                   window.Telegram.WebApp.close();
                 })
