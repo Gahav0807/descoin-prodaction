@@ -43,7 +43,7 @@ main{
   right: 0;
   bottom: 5%;
   width: 90%;
-  height: 10%;
+  height: 75px;
   border-radius: 100px;
   background-color: rgb(6, 65, 116);
   text-align: center;
@@ -52,7 +52,7 @@ main{
   align-items: center;
   text-decoration: none;
 }
-  
+
 #footer a {
   margin: 0 10px;
   color: rgb(255, 255, 255);
