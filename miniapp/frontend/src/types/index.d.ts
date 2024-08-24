@@ -23,7 +23,7 @@ declare global {
     MainButton: MainButton;
     HapticFeedback: HapticFeedback;
     isExpanded: boolean;
-    platform: 'desktop' | 'mobile' | 'tablet';
+    platform: 'android' | 'ios' | 'macos' | 'windows' | 'linux' | 'web';
     expand: () => void;
     close: () => void;
     ready: () => void;

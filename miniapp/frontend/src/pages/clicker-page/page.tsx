@@ -20,7 +20,7 @@ export default function ClickerPage() {
     const tg  = window.Telegram.WebApp;
     const platform = tg.platform;
 
-    if (platform === 'mobile') {
+    if (platform === 'android' || platform === 'ios') {
       const { user } = tg.initDataUnsafe;
       if (user && user.id) {
         setUserId(user.id);
