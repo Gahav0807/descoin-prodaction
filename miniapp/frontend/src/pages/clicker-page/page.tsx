@@ -9,7 +9,7 @@ const limitOfClicks = 10000;
 export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
   const [balance, setBalance] = useState<number | null>(null);
-  const [currentClicks, setCurrentClicks] = useState<number | null>(0);
+  const [currentClicks, setCurrentClicks] = useState<number>(0);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
   
