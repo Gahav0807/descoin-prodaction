@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
+
+body{
+    background: rgb(48, 48, 48);
+}
+
+.error-notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Noto Sans SC", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+    color: aliceblue;
+    text-align: center; /* добавленное свойство */
+  }
+  
+  #oops {
+    font-size: 50px;
+  }
+
+  #svg{
+    margin-top:50px;
+  }
+
+  

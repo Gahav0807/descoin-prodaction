@@ -1,5 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/router'
 import Image from 'next/image';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
@@ -12,40 +13,47 @@ export default function ClickerPage() {
   const [currentClicks, setCurrentClicks] = useState<number>(0);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
+  const router = useRouter()
   
   /* При заходе в приложение получаем данные пользователя с сервера */
   useEffect(() => {
     const tg  = window.Telegram.WebApp;
-    const { user } = tg.initDataUnsafe;
-    if (user && user.id) {
-      setUserId(user.id);
+    const platform = tg.platform;
 
-      getDataFromServerById(user.id)
-        .then(({ wallet, limit_clicks }) => {
-          setBalance(wallet);
-          setLimitClicks(limit_clicks);
+    if (platform === 'mobile') {
+      const { user } = tg.initDataUnsafe;
+      if (user && user.id) {
+        setUserId(user.id);
 
-          const progressPercentage = (limit_clicks / limitOfClicks) * 100;
-          setProgress(progressPercentage);
+        getDataFromServerById(user.id)
+          .then(({ wallet, limit_clicks }) => {
+            setBalance(wallet);
+            setLimitClicks(limit_clicks);
 
-          tg.expand()
-          tg.enableClosingConfirmation();
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error);
-          setUserId(undefined);
-          setBalance(0);
-          setLimitClicks(10000);
-          setProgress(0);
-          toast.error("Error on server side. Try later");
-        });
-    } else {
-      setUserId(undefined);
-      setBalance(0);
-      setLimitClicks(10000);
-      setProgress(0);
-      toast.error("Error on Telegram side! Try later");
-    }
+            const progressPercentage = (limit_clicks / limitOfClicks) * 100;
+            setProgress(progressPercentage);
+
+            tg.expand()
+            tg.enableClosingConfirmation();
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+            setUserId(undefined);
+            setBalance(0);
+            setLimitClicks(10000);
+            setProgress(0);
+            toast.error("Error on server side. Try later");
+          });
+      } else {
+        setUserId(undefined);
+        setBalance(0);
+        setLimitClicks(10000);
+        setProgress(0);
+        toast.error("Error on Telegram side! Try later");
+      }
+  } else {
+    router.push('/error-page')
+  }
   }, []);
 
   /* Обновляем данные пользователя каждые 5 сек, если он был в них активен 
