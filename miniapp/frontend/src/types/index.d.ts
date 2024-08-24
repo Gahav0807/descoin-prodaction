@@ -32,6 +32,7 @@ declare global {
     openInvoice: (url: string) => void;
     openTelegramLink: (url: string) => void;
     enableClosingConfirmation: () => void;
+    setClosingBehavior(options: ClosingBehaviorOptions): void;
   }
 
   interface InitDataUnsafe {
@@ -101,5 +102,10 @@ declare global {
     impactOccurred: (style: 'light' | 'medium' | 'heavy') => void;
     notificationOccurred: (type: 'error' | 'success' | 'warning') => void;
     selectionChanged: () => void;
+  }
+
+  interface ClosingBehaviorOptions {
+    behavior: 'close' | 'confirm';
+    onClose?: () => void;
   }
 }

@@ -23,52 +23,55 @@ export default function ClickerPage() {
           setBalance(wallet);
           setLimitClicks(limit_clicks);
 
-          const progressPercentage = (limit_clicks / limitOfClicks) * 100;
-          setProgress(progressPercentage);
-
-          window.Telegram.WebApp.expand();
+          // Настраиваем поведение закрытия приложения
+          window.Telegram.WebApp.setClosingBehavior({
+            behavior: 'confirm',
+            onClose: () => {
+              updateDataOnServer(userId, balance, limitClicks)
+                .then(() => {
+                  window.Telegram.WebApp.close();
+                })
+                .catch((error) => {
+                  console.error('Error updating data:', error);
+                  toast.error('Error saving data. Please try again later.');
+                });
+            },
+          });
         })
         .catch((error) => {
           console.error('Error fetching data:', error);
           setUserId(undefined);
           setBalance(0);
           setLimitClicks(10000);
-          setProgress(0);
-          toast.error("Error on server side. Try later");
+          toast.error('Error on server side. Try later');
         });
     } else {
       setUserId(undefined);
       setBalance(0);
       setLimitClicks(10000);
-      setProgress(0);
-      toast.error("Error on Telegram side! Try later");
+      toast.error('Error on Telegram side! Try later');
     }
+
+    // Resets closing behavior when component unmounts
+    return () => {
+      window.Telegram.WebApp.setClosingBehavior({
+        behavior: 'close',
+        onClose: () => {},
+      });
+    };
   }, []);
+
 
    /* Включаем подтверждение закрытия и обрабатываем обновление данных */
    useEffect(() => {
     if (balance !== null && limitClicks !== null && userId !== undefined) {
-      // Включаем подтверждение закрытия
-      window.Telegram.WebApp.enableClosingConfirmation();
-
-      const handleUpdateOnClose = () => {
-        // Функция обновления данных на сервере
-        updateDataOnServer(userId, balance, limitClicks)
-          .then(() => {
-            // Если обновление прошло успешно, можно закрывать приложение
-            window.Telegram.WebApp.close();
-          })
-          .catch((error) => {
-            console.error('Error updating data:', error);
-            toast.error("Error updating data on server.");
-          });
+      const handleViewportChanged = () => {
+        updateDataOnServer(userId, balance, limitClicks);
       };
+      window.Telegram.WebApp.onEvent('viewportChanged', handleViewportChanged);
 
-      window.addEventListener('beforeunload', handleUpdateOnClose);
-
-      // Очищаем событие при размонтировании компонента
       return () => {
-        window.removeEventListener('beforeunload', handleUpdateOnClose);
+        window.Telegram.WebApp.offEvent('viewportChanged', handleViewportChanged);
       };
     }
   }, [balance, limitClicks, userId]);
