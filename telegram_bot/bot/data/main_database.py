@@ -25,10 +25,10 @@ class BotDatabase:
     async def create_pool(self):
         if self.pool is None:
             self.pool = await asyncpg.create_pool(
-                user=os.getenv('PGUSER'),
-                password=os.getenv('PGPASSWORD'),
-                database=os.getenv('PGDATABASE'),
-                host=os.getenv('PGHOST')
+                user='gen_user',
+                password='290lCx8|3_2:nu',
+                database='default_db',
+                host='147.45.168.196'
             )
             logger.info("Connection to DB is created")
         return self.pool
