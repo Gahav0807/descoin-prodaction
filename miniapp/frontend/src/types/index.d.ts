@@ -31,6 +31,7 @@ declare global {
     offEvent: (eventType: string, callback: Function) => void;
     openInvoice: (url: string) => void;
     openTelegramLink: (url: string) => void;
+    enableClosingConfirmation: () => void;
   }
 
   interface InitDataUnsafe {

@@ -45,17 +45,30 @@ export default function ClickerPage() {
     }
   }, []);
 
-  /* Обновляем данные пользователя при выходе с страницы */
-  useEffect(() => {
+   /* Включаем подтверждение закрытия и обрабатываем обновление данных */
+   useEffect(() => {
     if (balance !== null && limitClicks !== null && userId !== undefined) {
-      const updateUserData = () => {
-        updateDataOnServer(userId, balance, limitClicks);
+      // Включаем подтверждение закрытия
+      window.Telegram.WebApp.enableClosingConfirmation();
+
+      const handleUpdateOnClose = () => {
+        // Функция обновления данных на сервере
+        updateDataOnServer(userId, balance, limitClicks)
+          .then(() => {
+            // Если обновление прошло успешно, можно закрывать приложение
+            window.Telegram.WebApp.close();
+          })
+          .catch((error) => {
+            console.error('Error updating data:', error);
+            toast.error("Error updating data on server.");
+          });
       };
 
-      window.Telegram.WebApp.onEvent('close', updateUserData);
+      window.Telegram.WebApp.onEvent('close', handleUpdateOnClose);
 
+      // Очищаем событие при размонтировании компонента
       return () => {
-        window.Telegram.WebApp.onEvent('close', updateUserData);
+        window.Telegram.WebApp.offEvent('close', handleUpdateOnClose);
       };
     }
   }, [balance, limitClicks, userId]);
