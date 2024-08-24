@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
