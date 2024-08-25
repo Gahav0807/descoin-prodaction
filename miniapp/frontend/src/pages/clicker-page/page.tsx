@@ -16,7 +16,7 @@ export default function ClickerPage() {
   
   /* При заходе в приложение получаем данные пользователя с сервера */
   useEffect(() => {
-    const tg  = window.Telegram.WebApp;
+    let tg  = window.Telegram.WebApp;
     const platform = tg.platform;
 
     if (platform === 'android' || platform === 'ios') {
@@ -65,9 +65,13 @@ export default function ClickerPage() {
       const updateUserData = () => {
         updateDataOnServer(userId, balance, limitClicks);
       };
-      setInterval(() => {
-        updateUserData()
-      }, 1000);
+      // Attach the event listener for 'web_app_close'
+      window.Telegram.WebApp.onEvent('web_app_close', updateUserData);
+
+      // Cleanup function to remove the event listener
+      return () => {
+        window.Telegram.WebApp.offEvent('web_app_close', updateUserData);
+      };
     }
   }, [balance, limitClicks, userId]);
 
