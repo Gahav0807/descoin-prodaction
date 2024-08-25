@@ -51,6 +51,7 @@ main{
   justify-content: flex-start;
   align-items: center;
   text-decoration: none;
+  font-family: "Dela Gothic One", sans-serif;
 }
 
 #footer a {

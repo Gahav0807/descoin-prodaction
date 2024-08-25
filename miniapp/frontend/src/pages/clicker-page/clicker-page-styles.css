@@ -60,7 +60,7 @@ span.progress {
   z-index: 5;
 }    
 
-#day_limit_text{
+#day-limit-text{
   z-index: 10;
   color: #ffffff;
 }
@@ -106,7 +106,7 @@ span.progress {
   z-index: 2;
 }
 
-#limit_display{
+#limit-display{
     color: #ffffff;
     text-align: center;
     font-size: 20px;
@@ -132,6 +132,7 @@ display: flex;
 justify-content: flex-start;
 align-items: center;
 box-shadow: 0px 6px 15px 10px  rgb(4, 106, 170);
+font-family: "Dela Gothic One", sans-serif;
 }
 
 #footer a {
@@ -145,6 +146,6 @@ box-shadow: 0px 6px 15px 10px  rgb(4, 106, 170);
   align-items: center;
 }
 
-.tap_btn{
+.tap-btn{
   background: #1e83cb;
 }

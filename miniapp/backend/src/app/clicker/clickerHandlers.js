@@ -16,8 +16,8 @@ async function getInfoByUserId(userId) {
       return result[0];
     } else {
       logger.info('Пользователя нет, заносим в бд, отправляем базовые значения');
-      await Database.setData(`INSERT INTO main (user_id, wallet, limit_clicks) VALUES (${userId},  0, 10000)`);
-      return { user_id: userId, wallet: 0, limit_clicks: 10000 };
+      await Database.setData(`INSERT INTO main (user_id, wallet, limit_clicks) VALUES (${userId},  0, 1000)`);
+      return { user_id: userId, wallet: 0, limit_clicks: 1000 };
     }
   } catch (e) {
     logger.error(`Ошибка при получении информации о пользователе: ${e}`);

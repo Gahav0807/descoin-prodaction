@@ -52,7 +52,7 @@ class BotDatabase:
 
                     logger.debug("Добавлен реферальный-узел!")
         except PostgresError as e:
-            logger.error("Error while fetching list: %s", e)
+            logger.error("Error while adding referral node: %s", e)
         except Exception as e:
             logger.error("Unexpected error: %s", e)
             raise e from e
@@ -73,7 +73,7 @@ class BotDatabase:
                         logger.info("Юзер является рефералом")
                         return True
         except PostgresError as e:
-            logger.error("Error while fetching list: %s", e)
+            logger.error("Error while fetching is referal: %s", e)
         except Exception as e:
             logger.error("Unexpected error: %s", e)
             raise e from e

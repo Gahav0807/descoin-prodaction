@@ -39,18 +39,6 @@ export default function TaskPage() {
           </>
         )}
       </div>
-
-      <footer id="footer">
-        <a id="footer_text" href="/" style={{ textDecoration: 'none' }}>
-          🪙<br />Tap
-        </a>
-        <a id="footer_text" href="ref-page" style={{ textDecoration: 'none' }}>
-          👨‍💼<br />Ref
-        </a>
-        <a id="footer_text" className="task-btn" style={{ textDecoration: 'none' }}>
-          📝<br />Task
-        </a>
-      </footer>
     </main>
   );
 }

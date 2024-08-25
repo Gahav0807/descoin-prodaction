@@ -121,7 +121,7 @@ export default function ClickerPage() {
       <Toaster position="top-center" richColors />
       <div className="progressbar">
         <span className="progress" style={{ width: `${progress}%` }}></span>
-        <div id="day_limit_text">DAY LIMIT⛅️</div>
+        <div id="day-limit-text">DAY LIMIT⛅️</div>
       </div>
 
       <div id="counter">{balance ?? 0}</div>
@@ -135,21 +135,9 @@ export default function ClickerPage() {
       />
       </button>
 
-      <div id="limit_display">
+      <div id="limit-display">
         {limitClicks}/{limitOfClicks}⚡️
       </div>
-
-      <footer id="footer">
-        <a id="footer_text" className="tap_btn" style={{ textDecoration: 'none' }}>
-          🪙<br />Tap
-        </a>
-        <a id="footer_text" href="ref-page" style={{ textDecoration: 'none' }}>
-          👨‍💼<br />Ref
-        </a>
-        <a id="footer_text" href="task-page" style={{ textDecoration: 'none' }}>
-          📝<br />Task
-        </a>
-      </footer>
     </main>
   );
 }
