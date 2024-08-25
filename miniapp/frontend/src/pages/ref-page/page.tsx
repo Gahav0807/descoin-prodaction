@@ -2,16 +2,16 @@
 import './ref-page-styles.css';
 import React, { useState, useEffect } from 'react';
 import { Toaster, toast } from "sonner";
-import Referal from "@/components/referal/page"
+import Referral from "@/components/referal/page"
 
-type Friend = {
+type Referral = {
   referal_name: string;
 };
 
 export default function RefPage() {
   const [userName, setUserName] = useState<string | undefined>(undefined);
   const [linkToCopy, setLinkToCopy] = useState<string>('');
-  const [friends, setFriends] = useState<Friend[]>([]);
+  const [referrals, setReferrals] = useState<Referral[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   /* Копирование реферальной сыллки при нажатии на кнопку */
@@ -46,7 +46,7 @@ export default function RefPage() {
       // Perform request to server to get list of referrals by userId
       const response = await fetch(`https://api.descoin-web.online/getReferals/${userId}`);
       const data = await response.json();
-      setFriends(data);
+      setReferrals(data);
     } catch (error) {
       toast.error("Error on server side! Try later");
     }
@@ -66,16 +66,16 @@ export default function RefPage() {
 
       <div id="list-of-referals">      
         {isLoading ? (
-          <p className="load-friends">Loading</p>
-        ) : friends.length === 0 ? (
-          <p className="load-friends">You dont have any friends.</p>
+          <p className="load-referrals">Loading</p>
+        ) : referrals.length === 0 ? (
+          <p className="load-referrals">You dont have any referrals.</p>
         ) : (
-          <div className="list-of-friends">
-            {friends.map((friend, index) => (
-              <Referal
+          <div className="list-of-referrals">
+            {referrals.map((referral, index) => (
+              <Referral
                 key={index}
                 index={index + 1}
-                name={friend.referal_name}
+                name={referral.referal_name}
               />
             ))}
           </div>
