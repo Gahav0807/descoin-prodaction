@@ -11,6 +11,7 @@ export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
   const [balance, setBalance] = useState<number | null>(null);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
+  const [currentClicks, setCurrentClicks] = useState<number>(0);
   const [progress, setProgress] = useState(0);
   const router = useRouter()
   
@@ -65,13 +66,12 @@ export default function ClickerPage() {
       const updateUserData = () => {
         updateDataOnServer(userId, balance, limitClicks);
       };
-      // Attach the event listener for 'web_app_close'
-      window.Telegram.WebApp.onEvent('web_app_close', updateUserData);
-
-      // Cleanup function to remove the event listener
-      return () => {
-        window.Telegram.WebApp.offEvent('web_app_close', updateUserData);
-      };
+      setInterval(() => {
+        if (currentClicks > 0) {
+          updateUserData()
+          setCurrentClicks(0)
+        }
+      }, 100);
     }
   }, [balance, limitClicks, userId]);
 
@@ -92,6 +92,7 @@ export default function ClickerPage() {
     }
 
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
+    setCurrentClicks((prevBalance) => (prevBalance ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
   };
 
