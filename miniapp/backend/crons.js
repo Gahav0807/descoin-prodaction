@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const Database = require('./src/config/database');
 const logger = require('./src/config/logger');
 
-cron.schedule('0 */8 * * *', () => {
+cron.schedule('0 */3 * * *', () => {
     updateLimitClicks();
 });
 

@@ -87,7 +87,7 @@ export default function ClickerPage() {
     },100);
     
     if (limitClicks && limitClicks <= 0) {
-      toast.error('Limit!');
+      toast.error('Limit! Come back in 3 hours');
       return;
     }
 

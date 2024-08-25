@@ -40,19 +40,19 @@ async def start(message: types.Message):
         if referent_id.isdigit(): # Проверяем, что ID референта является числом
             if referent_id != str(message.from_user.id): # Пользователь зашел не по своей ссылке
                 if await data.is_user_referal(message.from_user.id): # Пользователь уже является чьим-то рефералом
-                    await message.answer("Ты уже являешься рефералом! Не пытайся зайти через чью-то реферальную ссылку.")
+                    await message.answer("You are already a referral! Don't try to log in through someone's referral link.")
                 else: # Пользователь не является чьим-то рефералом
                     # Добавим реферала, начислим награду
                     await data.add_ref_node(int(referent_id), message.from_user.id, message.from_user.username)
-                    await message.answer("Ты успешно зарегистрировался как реферал!")
+                    await message.answer("You have successfully registered as a referral!")
                     # Стандартный текст
                     await message.answer("Airdrop Descoin🎁For each friend you will receive 50,000 descoin tokens!", reply_markup=await start_keyboard())
                     # Оповещаем референта о новом реферале
                     try:
-                        await bot.send_message(chat_id=referent_id, text="По вашей реферальной ссылке зарегистрировался новый пользователь!")
+                        await bot.send_message(chat_id=referent_id, text=f"A new user has registered using your referral link!\n@{message.from_user.username}")
                     except:
                         pass # Если референт заблокировал бота, отлавливаем ошибку
             else: # Пользователь зашел по своей ссылке
-                await message.answer("Нельзя заходить по своей реферальной ссылке!")
+                await message.answer("You can't use your referral link!")
         else: # Пользователь зашел не по реф ссылке
             await message.answer("Airdrop Descoin🎁For each friend you will receive 50,000 descoin tokens!", reply_markup=await start_keyboard())
