@@ -40,14 +40,14 @@ export default function ClickerPage() {
             console.error('Error fetching data:', error);
             setUserId(undefined);
             setBalance(0);
-            setLimitClicks(10000);
+            setLimitClicks(1000);
             setProgress(0);
             toast.error("Error on server side. Try later");
           });
       } else {
         setUserId(undefined);
         setBalance(0);
-        setLimitClicks(10000);
+        setLimitClicks(1000);
         setProgress(0);
         toast.error("Error on Telegram side! Try later");
       }
