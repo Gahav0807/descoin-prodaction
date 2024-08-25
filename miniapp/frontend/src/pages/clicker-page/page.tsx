@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation'
 import Image from 'next/image';
 import './clicker-page-styles.css';
@@ -13,6 +13,7 @@ export default function ClickerPage() {
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [currentClicks, setCurrentClicks] = useState<number>(0);
   const [progress, setProgress] = useState(0);
+  const updateUserDataTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const router = useRouter()
   
   /* При заходе в приложение получаем данные пользователя с сервера */
@@ -56,24 +57,25 @@ export default function ClickerPage() {
   }
   }, [router]);
 
-  /* Обновляем данные пользователя каждые 5 сек, если он был в них активен 
-    Переменная currentClicks засчитывает каждое нажатие в нынешнем сеансе, 
-    если в предыдущие 5 сек пользователь был активен, его данные обновляются в БД,
-    иначе ничего не делаем
-  */
-  useEffect(() => {
-    if (balance !== null && limitClicks !== null && userId !== undefined) {
-      const updateUserData = () => {
-        updateDataOnServer(userId, balance, limitClicks);
-      };
-      setInterval(() => {
-        if (currentClicks > 0) {
-          updateUserData()
-          setCurrentClicks(0)
-        }
-      }, 10);
+  const updateUserData = useCallback(async () => {
+    if (userId !== undefined && balance !== null && limitClicks !== null) {
+      try {
+        await updateDataOnServer(userId, balance, limitClicks);
+        setCurrentClicks(0);
+      } catch (error) {
+        console.error('Error updating data:', error);
+      }
     }
-  }, [balance, limitClicks, userId]);
+  }, [userId, balance, limitClicks]);
+
+  useEffect(() => {
+    if (currentClicks > 0) {
+      if (updateUserDataTimer.current) {
+        clearTimeout(updateUserDataTimer.current);
+      }
+      updateUserDataTimer.current = setTimeout(updateUserData, 0);
+    }
+  }, [currentClicks, updateUserData]);
 
   /* Логика кликера, анимация при нажатии */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
