@@ -10,7 +10,6 @@ const limitOfClicks = 1000;
 export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
   const [balance, setBalance] = useState<number | null>(null);
-  const [currentClicks, setCurrentClicks] = useState<number>(0);
   const [limitClicks, setLimitClicks] = useState<number | null>(null);
   const [progress, setProgress] = useState(0);
   const router = useRouter()
@@ -67,11 +66,8 @@ export default function ClickerPage() {
         updateDataOnServer(userId, balance, limitClicks);
       };
       setInterval(() => {
-        if(currentClicks > 0) {
-          updateUserData()
-          setCurrentClicks(0);
-        } 
-      }, 1500);
+        updateUserData()
+      }, 1000);
     }
   }, [balance, limitClicks, userId]);
 
@@ -93,7 +89,6 @@ export default function ClickerPage() {
 
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
-    setCurrentClicks((prevCurrentClicks) => (prevCurrentClicks ?? 0) + 1);
   };
 
   /* Хендлеры по запросам на сервер */
