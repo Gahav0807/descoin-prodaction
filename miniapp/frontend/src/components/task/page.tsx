@@ -26,10 +26,10 @@ export default function Task({
       const response = await fetch(`https://api.descoin-web.online/tryDoTask/${user_id}/${task_in_db}/${task_price}`);
       const data = await response.json();
       if (!data.success){
-        toast.info("Вы уже сделали таск!")
+        toast.info("You've already done the task!")
       } else{
         router.push(url_of_btn)
-        toast.success("Вы успешно сделали таск!")
+        toast.success("You have successfully completed the task!")
       }
     } catch (error) {
       console.error(error);
