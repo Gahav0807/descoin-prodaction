@@ -74,7 +74,6 @@ span.progress {
   left: 50%;
   width: 320px;
   height: 320px;
-  /* background-image: url("./images/des_logo_320x320.jpg"); */
   background-color: rgb(20, 208, 241);
   border: none;
   border-radius: 100%;
@@ -82,13 +81,21 @@ span.progress {
   box-shadow: 0px 6px 20px 1px rgb(6, 74, 103);
   z-index: 10;
   
-  /* Центрирование с помощью margin */
-  margin-top: -160px; /* Половина высоты кнопки */
-  margin-left: -160px; /* Половина ширины кнопки */
+  
+  margin-top: -160px; 
+  margin-left: -160px; 
 }
 
 #button img{
   border-radius: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
 }
 
 #counter{

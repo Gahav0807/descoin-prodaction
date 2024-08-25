@@ -101,6 +101,10 @@ body {
   border-radius: 50px;
 }
 
+a:focus {
+  outline: none;
+}
+
 #footer {
   position: fixed;
   justify-content: center;

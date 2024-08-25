@@ -64,7 +64,7 @@ export default function RefPage() {
         <button id="copy-url-of-ref-btn" onClick={handleCopyLink}>COPY YOUR LINK</button>
       </div>
 
-      <div id="list-of-referals">      
+      <div id="list-of-referrals">      
         {isLoading ? (
           <p className="load-referrals">Loading</p>
         ) : referrals.length === 0 ? (
