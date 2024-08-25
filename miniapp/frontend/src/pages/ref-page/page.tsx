@@ -56,15 +56,15 @@ export default function RefPage() {
     <main>
       <Toaster position="top-center" richColors />
       <div className="user-info">
-        <div id="avatar">
-          <div id="profile-logo-head"></div>
-          <div id="profile-logo-neck"></div>
+        <div className="avatar">
+          <div className="profile-logo-head"></div>
+          <div className="profile-logo-neck"></div>
         </div>
-        <p id="name-of-user">{userName || 'Unknown'}</p>
-        <button id="copy-url-of-ref-btn" onClick={handleCopyLink}>COPY YOUR LINK</button>
+        <p className="name-of-user">{userName || 'Unknown'}</p>
+        <button className="copy-url-of-ref-btn" onClick={handleCopyLink}>COPY YOUR LINK</button>
       </div>
 
-      <div id="list-of-referrals">      
+      <div className="list-of-referrals">      
         {isLoading ? (
           <p className="load-referrals">Loading</p>
         ) : referrals.length === 0 ? (

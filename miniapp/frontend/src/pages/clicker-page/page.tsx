@@ -123,12 +123,12 @@ export default function ClickerPage() {
       <Toaster position="top-center" richColors />
       <div className="progressbar">
         <span className="progress" style={{ width: `${progress}%` }}></span>
-        <div id="day-limit-text">DAY LIMIT⛅️</div>
+        <div className="day-limit-text">DAY LIMIT⛅️</div>
       </div>
 
-      <div id="counter">{balance ?? 0}</div>
+      <div className="counter">{balance ?? 0}</div>
 
-      <button id="button" onClick={handleClick}>
+      <button className="button" onClick={handleClick}>
       <Image
         src="/images/des_logo_320x320.jpg"
         alt="My Image"
@@ -137,7 +137,7 @@ export default function ClickerPage() {
       />
       </button>
 
-      <div id="limit-display">
+      <div className="limit-display">
         {limitClicks}/{limitOfClicks}⚡️
       </div>
     </main>

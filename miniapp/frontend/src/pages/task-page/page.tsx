@@ -21,12 +21,12 @@ export default function TaskPage() {
   return (
     <main>
       <Toaster position="top-center" richColors />
-      <div id="hi-container">
+      <div className="hi-container">
         <h1>Earn more coins!</h1>
-        <p id="text-list-of-task">List of tasks</p>
+        <p className="text-list-of-task">List of tasks</p>
       </div>
 
-      <div id="task-container">
+      <div className="task-container">
         {userId !== undefined && (
           <>
             <Task

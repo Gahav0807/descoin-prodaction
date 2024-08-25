@@ -22,7 +22,7 @@ body {
   margin-top: 20px;
 }
 
-#avatar {
+.avatar {
   width: 130px;
   height: 130px;
   background-color: aliceblue;
@@ -34,7 +34,7 @@ body {
   box-shadow: 0px 3px 20px 5px rgb(146, 195, 215);
 }
 
-#profile-logo-head {
+.profile-logo-head {
   width: 50px;
   height: 50px;
   background-color: rgb(9, 86, 125);
@@ -45,7 +45,7 @@ body {
   align-items: center;
 }
 
-#profile-logo-neck {
+.profile-logo-neck {
   margin-top: 10px;
   width: 85px;
   height: 35px;
@@ -56,7 +56,7 @@ body {
   justify-content: center;
 }
 
-#name-of-user {
+.name-of-user {
   background-color: rgb(44, 244, 255);
   box-shadow: 0px 2px 20px 1px rgb(17, 130, 171);
   background-color: rgb(247, 254, 255);
@@ -73,7 +73,7 @@ body {
   margin-bottom: 5px;
 }
 
-#copy-url-of-ref-btn {
+.copy-url-of-ref-btn {
   font-family: "Dela Gothic One", sans-serif;
   font-size: 15px;
   background-color: rgb(6, 88, 165);
@@ -87,11 +87,11 @@ body {
   margin-top: 20px;
 }
 
-#copy-url-of-ref-btn:active {
+.copy-url-of-ref-btn:active {
   transform: scale(0.95);
 }
 
-#list-of-referrals {
+.list-of-referrals {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,11 +101,19 @@ body {
   border-radius: 50px;
 }
 
-a:focus {
-  outline: none;
+.tap-btn,
+.ref-btn,
+.task-btn {
+  pointer-events: none;
 }
 
-#footer {
+.tap-btn > *,
+.ref-btn > *,
+.task-btn > * {
+  pointer-events: auto;
+}
+
+.footer {
   position: fixed;
   justify-content: center;
   left: 50%;
@@ -124,7 +132,7 @@ a:focus {
   font-family: "Dela Gothic One", sans-serif;
 }
 
-#footer a {
+.footer a {
   margin: 0 10px;
   color: rgb(255, 255, 255);
   padding: 10px 15px;

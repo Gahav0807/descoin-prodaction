@@ -7,14 +7,14 @@ export default function NavigationPanel() {
   return (
     <>
       { pathName !=="/error-page" &&
-      <footer id="footer">
-        <a id="footer_text" className="tap-btn" href="/" style={{ textDecoration: 'none' }}>
+      <footer className="footer">
+        <a className="tap-btn" href="/" style={{ textDecoration: 'none' }}>
           🪙<br />Tap
         </a>
-        <a id="footer_text" className="ref-btn" href="ref-page" style={{ textDecoration: 'none' }}>
+        <a className="ref-btn" href="ref-page" style={{ textDecoration: 'none' }}>
           👨‍💼<br />Ref
         </a>
-        <a id="footer_text" className="task-btn" href="task-page" style={{ textDecoration: 'none' }}>
+        <a className="task-btn" href="task-page" style={{ textDecoration: 'none' }}>
           📝<br />Task
         </a>
       </footer>
