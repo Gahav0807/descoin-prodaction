@@ -71,7 +71,7 @@ export default function ClickerPage() {
           updateUserData()
           setCurrentClicks(0)
         }
-      }, 100);
+      }, 10);
     }
   }, [balance, limitClicks, userId]);
 
