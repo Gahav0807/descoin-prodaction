@@ -5,7 +5,7 @@ import Image from 'next/image';
 import './clicker-page-styles.css';
 import { Toaster, toast } from "sonner";
 
-const limitOfClicks = 10000;
+const limitOfClicks = 1000;
 
 export default function ClickerPage() {
   const [userId, setUserId] = useState<number | undefined>(undefined);
