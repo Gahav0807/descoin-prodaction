@@ -37,13 +37,9 @@ main{
 .tap-btn,
 .ref-btn,
 .task-btn {
-  pointer-events: none;
-}
-
-.tap-btn > *,
-.ref-btn > *,
-.task-btn > * {
-  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .footer {

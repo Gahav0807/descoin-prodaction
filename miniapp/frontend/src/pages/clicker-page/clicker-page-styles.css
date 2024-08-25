@@ -81,29 +81,24 @@ span.progress {
   box-shadow: 0px 6px 20px 1px rgb(6, 74, 103);
   z-index: 10;
   
-  
   margin-top: -160px; 
   margin-left: -160px; 
+
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .button img{
   border-radius: 100%;
 }
 
-.button:focus {
-  outline: none;
-}
-
 .tap-btn,
 .ref-btn,
 .task-btn {
-  pointer-events: none;
-}
-
-.tap-btn > *,
-.ref-btn > *,
-.task-btn > * {
-  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  cursor: pointer;
 }
 
 .counter{
