@@ -8,7 +8,7 @@ cron.schedule('0 0 */3 * * *', () => {
 
 async function updateLimitClicks() {
     try {
-        await Database.setData("UPDATE main SET limit_clicks = limit_clicks + 1");
+        await Database.setData("UPDATE main SET limit_clicks = 1000");
         logger.info('Доступные клики у пользователей обновлены');
     } catch (e) {
         logger.error(`Ошибка при обновлении лимита доступных кликов: ${e}`);
