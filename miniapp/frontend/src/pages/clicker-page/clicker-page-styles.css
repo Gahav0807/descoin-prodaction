@@ -69,14 +69,14 @@ span.progress {
   position: absolute;
   font-size: 56px;
   color: #ffffff;
-  animation: increment-fade 1s ease-out forwards; /* Use 'forwards' to maintain the final state */
+  animation: increment-fade 0.5s ease-out forwards;
   font-family: "Dela Gothic One", sans-serif;
   z-index: 20;
   -webkit-tap-highlight-color: transparent;
   outline: none;
   cursor: pointer;
-  user-select: none; /* Prevent text selection */
-  pointer-events: none; /* Prevent interaction with the animation */
+  user-select: none; 
+  pointer-events: none; 
 }
 
 @keyframes increment-fade {
