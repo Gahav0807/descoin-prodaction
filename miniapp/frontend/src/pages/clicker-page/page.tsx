@@ -79,24 +79,33 @@ export default function ClickerPage() {
 
   /* Логика кликера, анимация при нажатии */
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // Проверка: прогрузились ли данные. Если нет - возвращаем оповещение
+    if (balance === null || limitClicks === null || limitClicks <= 0) {
+        toast.error('Please wait for your data to load.');
+        return;
+    }
+
+    // Анимация
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
     card.style.transform = `perspective(1000px) rotateX(${-y / 10}deg) rotateY(${x / 10}deg)`;
-    setTimeout(()=>{
-      card.style.transform = '';
-    },100);
     
-    if (limitClicks && limitClicks <= 1) {
-      toast.error('Limit! Come back in 3 hours');
-      return;
+    setTimeout(() => {
+        card.style.transform = '';
+    }, 100);
+
+    if (limitClicks <= 1) {
+        toast.error('Limit! Come back in 3 hours');
+        return;
     }
 
+    // +1 к балансу, -1 доступные клики
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
-    setCurrentClicks((prevBalance) => (prevBalance ?? 0) + 1);
+    setCurrentClicks((prevClicks) => (prevClicks ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
-  };
+};
 
   /* Хендлеры по запросам на сервер */
   async function getDataFromServerById(userId: number) {
