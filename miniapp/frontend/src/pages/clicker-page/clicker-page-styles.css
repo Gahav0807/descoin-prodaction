@@ -65,11 +65,36 @@ span.progress {
   color: #ffffff;
 }
 
+.increment-animation {
+  position: absolute;
+  font-size: 56px;
+  color: #ffffff;
+  animation: increment-fade 1s ease-out forwards; /* Use 'forwards' to maintain the final state */
+  font-family: "Dela Gothic One", sans-serif;
+  z-index: 20;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  pointer-events: none; /* Prevent interaction with the animation */
+}
+
+@keyframes increment-fade {
+  0% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+}
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 320px;

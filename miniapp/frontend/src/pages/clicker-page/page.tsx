@@ -57,6 +57,7 @@ export default function ClickerPage() {
   }
   }, [router]);
 
+  /* Обновление данных юзера */
   const updateUserData = useCallback(async () => {
     if (userId !== undefined && balance !== null && limitClicks !== null) {
       try {
@@ -84,7 +85,6 @@ export default function ClickerPage() {
         toast.error('Please wait for your data to load.');
         return;
     }
-
     // Анимация
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -105,6 +105,19 @@ export default function ClickerPage() {
     setBalance((prevBalance) => (prevBalance ?? 0) + 1);
     setCurrentClicks((prevClicks) => (prevClicks ?? 0) + 1);
     setLimitClicks((prevLimitClicks) => (prevLimitClicks ?? 0) - 1);
+
+    // Добавление анимации единичек
+    const incrementAnimation = document.createElement('div');
+    incrementAnimation.classList.add('increment-animation');
+    incrementAnimation.style.left = `${e.clientX}px`;
+    incrementAnimation.style.top = `${e.clientY}px`;
+    incrementAnimation.textContent = '+1';
+    document.body.appendChild(incrementAnimation);
+
+    // Удаление анимации через 1 секунду
+    setTimeout(() => {
+        incrementAnimation.remove();
+    }, 1000);
 };
 
   /* Хендлеры по запросам на сервер */
@@ -127,6 +140,14 @@ export default function ClickerPage() {
     }
   }
 
+  /* Другое */
+  const getFontSize = () => {
+    if (balance && balance > 10000000000) {
+        return '20px'; // Уменьшенный размер шрифта для больших значений
+    }
+    return '35px'; // Стандартный размер шрифта
+};
+
   return (
     <main>
       <Toaster position="top-center" richColors />
@@ -135,7 +156,7 @@ export default function ClickerPage() {
         <div className="day-limit-text">DAY LIMIT⛅️</div>
       </div>
 
-      <div className="counter">{balance ?? 0}</div>
+      <div className="counter" style={{ fontSize: getFontSize() }}>{balance ?? 0}</div>
 
       <button className="button" onClick={handleClick}>
       <Image
