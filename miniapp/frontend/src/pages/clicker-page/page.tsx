@@ -88,7 +88,7 @@ export default function ClickerPage() {
       card.style.transform = '';
     },100);
     
-    if (limitClicks && limitClicks <= 0) {
+    if (limitClicks && limitClicks <= 1) {
       toast.error('Limit! Come back in 3 hours');
       return;
     }
