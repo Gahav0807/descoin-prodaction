@@ -1,7 +1,0 @@
-[2024-08-25T14:05:46.747Z] info: Connection to DB is created
-[2024-08-25T14:05:46.751Z] info: Доступные клики у пользователей обновлены
-[2024-08-25T14:05:47.044Z] debug: Executed query: UPDATE main SET limit_clicks = limit_clicks + 1
-[2024-08-25T14:05:48.771Z] info: Доступные клики у пользователей обновлены
-[2024-08-25T14:05:48.815Z] debug: Executed query: UPDATE main SET limit_clicks = limit_clicks + 1
-[2024-08-25T14:05:50.785Z] info: Доступные клики у пользователей обновлены
-[2024-08-25T14:05:50.832Z] debug: Executed query: UPDATE main SET limit_clicks = limit_clicks + 1

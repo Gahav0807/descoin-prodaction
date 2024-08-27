@@ -35,6 +35,15 @@ services:
       dockerfile: bot.dockerfile
     container_name: bot
 
+  crons:
+    build:
+      context: ./miniapp/backend
+      dockerfile: crons.dockerfile
+    container_name: crons
+    networks:
+      - app-network
+    restart: always
+
   nginx:
     image: nginx:alpine
     container_name: nginx
