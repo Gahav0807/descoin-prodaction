@@ -2,7 +2,7 @@ from pathlib import Path
 from aiogram import types, Router
 from aiogram.filters import Command
 from keyboards.inline import start_keyboard
-from data.main_database import BotDatabase 
+from data.main_database import MainDatabase 
 from data.users_list_data import UsersDatabase 
 from config import bot
 
@@ -11,10 +11,10 @@ current_dir = Path(__file__).parent
 db_file_path = current_dir.parent / "utils" / "broadcast" / "database_tg_bot.db"
 users_db = UsersDatabase(db_file_path)
 
-data = BotDatabase()
-ref_router = Router()
+data = MainDatabase()
+start_router = Router()
 
-@ref_router.message(Command('start'))
+@start_router.message(Command('start'))
 async def start(message: types.Message):
     """
     Обработчик команды /start.

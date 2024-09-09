@@ -32,3 +32,11 @@ class UsersDatabase:
                 return self.cursor.execute("SELECT id FROM users").fetchall()
         except sqlite3.Error as error:
             logger.error(f"Ошибка при получении списка пользователей: {error}")
+
+    def get_count_of_users(self):
+        try:
+            with self.connection:
+                result = self.cursor.execute("SELECT COUNT(*) FROM users").fetchone()
+                return result[0]
+        except sqlite3.Error as error:
+            logger.error(f"Ошибка при получении списка пользователей: {error}")

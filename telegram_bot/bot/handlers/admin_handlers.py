@@ -12,9 +12,26 @@ current_dir = Path(__file__).parent
 db_file_path = current_dir.parent / "utils" / "broadcast" / "database_tg_bot.db"
 users_db = UsersDatabase(db_file_path)
 
-broadcast_router = Router()
+admin_router = Router()
 
-@broadcast_router.message(Command("sendall"))
+# -----------------------   ADMIN-PANEL  -------------------------------
+
+@admin_router.message(Command("admin_panel"))
+async def start_broadcast(message: types.Message):
+    """
+    Предоставляет админу список команд, доступных ему.
+    """
+    if message.chat.type == 'private' and message.from_user.id in ADMINS_ID:
+        await message.answer(
+            "<b>Привет админ! Вот список команд, доступных тебе:</b>\n\n"
+            "/sendall - рассылка поста всем пользователям бота\n"
+            "/users_count - количество пользователей использующих бота",
+            parse_mode='HTML'
+        )
+
+# -----------------------   BROADCAST (РАССЫЛКА)  -------------------------------
+
+@admin_router.message(Command("sendall"))
 async def start_broadcast(message: types.Message, state: FSMContext):
     """
     Начало процесса рассылки, доступно только администратору.
@@ -25,7 +42,7 @@ async def start_broadcast(message: types.Message, state: FSMContext):
         await message.reply("Введите текст поста")
         await state.set_state(BroadcastStates.get_text)
 
-@broadcast_router.message(BroadcastStates.get_text)
+@admin_router.message(BroadcastStates.get_text)
 async def get_post_text(message: types.Message, state: FSMContext):
     """
     Получение текста поста, сохранение его в состоянии.
@@ -38,7 +55,7 @@ async def get_post_text(message: types.Message, state: FSMContext):
     else:
         await message.reply("Пожалуйста, введите текст поста")
 
-@broadcast_router.message(BroadcastStates.get_photo)
+@admin_router.message(BroadcastStates.get_photo)
 async def get_post_photo(message: types.ChatPhoto, state: FSMContext):
     """
     Получение фото поста, сохранение его в состоянии.
@@ -51,7 +68,7 @@ async def get_post_photo(message: types.ChatPhoto, state: FSMContext):
     else:
         await message.reply("Пожалуйста, отправьте фото")
 
-@broadcast_router.message(BroadcastStates.get_keyboard_text)
+@admin_router.message(BroadcastStates.get_keyboard_text)
 async def get_post_keyboard_text(message: types.Message, state: FSMContext):
     """
     Получение текста кнопки поста, сохранение его в состоянии.
@@ -64,7 +81,7 @@ async def get_post_keyboard_text(message: types.Message, state: FSMContext):
     else:
         await message.reply("Пожалуйста, отправьте текст")
 
-@broadcast_router.message(BroadcastStates.get_keyboard_url)
+@admin_router.message(BroadcastStates.get_keyboard_url)
 async def get_post_keyboard_url(message: types.Message, state: FSMContext):
     """
     Получение URL кнопки поста, сохранение его в состоянии.
@@ -93,7 +110,7 @@ async def get_post_keyboard_url(message: types.Message, state: FSMContext):
     else:
         await message.reply("Пожалуйста, отправьте сыллку")
 
-@broadcast_router.callback_query(F.data.startswith('confirm_send_post'))
+@admin_router.callback_query(F.data.startswith('confirm_send_post'))
 async def send_post(call: types.CallbackQuery, state: FSMContext):
     """
     Обработчик подтверждения рассылки поста.
@@ -117,7 +134,7 @@ async def send_post(call: types.CallbackQuery, state: FSMContext):
     else:
         pass
 
-@broadcast_router.callback_query(F.data.startswith('cancel_send_post'))
+@admin_router.callback_query(F.data.startswith('cancel_send_post'))
 async def send_post(call: types.CallbackQuery, state: FSMContext):
     """
     Обработчик отмены рассылки поста.
@@ -128,3 +145,18 @@ async def send_post(call: types.CallbackQuery, state: FSMContext):
         await call.message.answer("Рассылка отменена.")
     else:
         pass
+
+
+# -----------------------   OTHERS (ДРУГОЕ)  -------------------------------
+
+@admin_router.message(Command("users_count"))
+async def get_users_count(message: types.Message):
+    """
+    Предоставляет админу количество пользователей, использующих бота.
+    """
+    if message.chat.type == 'private' and message.from_user.id in ADMINS_ID:
+        count_of_users = users_db.get_count_of_users()
+        await message.answer(
+            f"Количество пользователей, использующих бота: \n ⬇️⬇️⬇️ \n\n <b>{count_of_users} чел.</b>",
+            parse_mode="HTML"
+        )

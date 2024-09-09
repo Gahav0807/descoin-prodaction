@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-class BotDatabase:
+class MainDatabase:
     """
     Класс для работы с главной БД (общая с mini-app).
     Используется для работы с реферальной системой.
