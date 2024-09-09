@@ -21,7 +21,8 @@ class UsersDatabase:
     def add_user(self,user_id):
         try:
             with self.connection:
-                return self.cursor.execute("INSERT INTO users (id) VALUES(?)", (user_id,))
+                return self.cursor.execute("INSERT INTO users (id) VALUES(?)", (user_id,)) ; self.connection.commit()
+               
         except sqlite3.Error as error:
             logger.error(f"Ошибка при добавлении пользователя: {error}")
 
